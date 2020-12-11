@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://Ryyyc.github.io</id>
+    <title>Rme</title>
+    <updated>2020-12-11T07:38:30.697Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://Ryyyc.github.io"/>
+    <link rel="self" href="https://Ryyyc.github.io/atom.xml"/>
+    <subtitle>Root down，grow upward.</subtitle>
+    <logo>https://Ryyyc.github.io/images/avatar.png</logo>
+    <icon>https://Ryyyc.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2020, Rme</rights>
+    <entry>
+        <title type="html"><![CDATA[windows10 下 用图片手把手教你 卸载 cygwin]]></title>
+        <id>https://Ryyyc.github.io/post/Windows10-Uninstall-Cygwin/</id>
+        <link href="https://Ryyyc.github.io/post/Windows10-Uninstall-Cygwin/">
+        </link>
+        <updated>2020-09-20T08:25:52.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="windows10-下-卸载-cygwin">windows10 下 卸载 cygwin</h1>
+<p><br><br></p>
+<p>进入 <a href="https://cygwin.com/install.html">官方</a>， 下载符合自己操作系统的 Cygwin 安装程序（这个程序包含了 Cygwin 的安装、更新、卸载功能）</p>
+<figure data-type="image" tabindex="1"><img src="https://img-blog.csdnimg.cn/20200920161438817.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1Vzc2lt,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" loading="lazy"></figure>
+<br>
+<p>打开 Cygwin 安装程序，点击 <strong>下一步</strong></p>
+<p><img src="https://img-blog.csdnimg.cn/20200920161451596.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1Vzc2lt,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" loading="lazy"><br>
+<br></p>
+<p>选择 第三个安装类型 <strong>Install from Local Directory</strong></p>
+<figure data-type="image" tabindex="2"><img src="https://img-blog.csdnimg.cn/20200920161503251.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1Vzc2lt,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" loading="lazy"></figure>
+<br>
+<p>此时程序会自动检测到你 Cygwin 的本地安装目录，如果没有，则手动将 <strong>Root Directory</strong> 改为 Cygwin 的本地安装目录</p>
+<p><img src="https://img-blog.csdnimg.cn/2020092016151521.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1Vzc2lt,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" loading="lazy"><br>
+<br></p>
+<p>点击 <strong>是</strong></p>
+<p><img src="https://img-blog.csdnimg.cn/20200920161526647.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1Vzc2lt,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" loading="lazy"><br>
+<br></p>
+<p>点击<strong>下一步</strong></p>
+<figure data-type="image" tabindex="3"><img src="https://img-blog.csdnimg.cn/20200920161537233.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1Vzc2lt,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" loading="lazy"></figure>
+<p><br><br></p>
+<p>重点来啦！</p>
+<p><strong>View</strong> 选择 <strong>Category</strong></p>
+<p><strong>Package</strong> 选择 <strong>All</strong></p>
+<p><strong>New</strong> 选择 <strong>Uninstall</strong></p>
+<p>点击 <strong>下一步</strong></p>
+<p><img src="https://img-blog.csdnimg.cn/20200920161549414.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1Vzc2lt,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" loading="lazy"><br>
+<br></p>
+<p>点击 <strong>下一步</strong>，等待卸载完成</p>
+<p><img src="https://img-blog.csdnimg.cn/20200920161559426.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1Vzc2lt,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" loading="lazy"><br>
+<br></p>
+<p>卸载完成</p>
+<p><img src="https://img-blog.csdnimg.cn/20200920161609926.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1Vzc2lt,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" loading="lazy"><br>
+<br><br></p>
+<p>然后可以再把 Cygwin 安装目录下的文件手动删完</p>
+<p><br><br><br></p>
+<p>附：<a href="https://cygwin.com/faq.html#faq.setup.uninstall-all">官方文档</a></p>
+<blockquote>
+<p>2.20.How do I uninstall all of Cygwin?</p>
+<p>Setup has no automatic uninstall facility. The recommended method to remove all of Cygwin is as follows:</p>
+<p>If you have any Cygwin services running, remove by repeating the instructions in https://cygwin.com/faq/faq.html#faq.setup.uninstall-service for all services that you installed. Common services that might have been installed are sshd, cron, cygserver, inetd, apache, postgresql, and so on.</p>
+<p>Stop the X11 server if it is running, and terminate any Cygwin programs that might be running in the background. Exit the command prompt and ensure that no Cygwin processes remain. Note: If you want to save your mount points for a later reinstall, first save the output of mount -m as described at https://cygwin.com/cygwin-ug-net/mount.html.</p>
+<p>If you installed cyglsa.dll by running the shell script /usr/bin/cyglsa-config as described in https://cygwin.com/cygwin-ug-net/ntsec.html, then you need to configure Windows to stop using the LSA authentication package. You do so by editing the registry and restoring /HKEY_LOCAL_MACHINE/SYSTEM/CurrentControlSet/Control/Lsa/Authentication Packages back to it's original value of msv1_0, and then rebooting.</p>
+<p>Delete the Cygwin root folder and all subfolders. If you get an error that an object is in use, then ensure that you've stopped all services and closed all Cygwin programs. If you get a 'Permission Denied' error then you will need to modify the permissions and/or ownership of the files or folders that are causing the error. For example, sometimes files used by system services end up owned by the SYSTEM account and not writable by regular users.</p>
+<p>The quickest way to delete the entire tree if you run into this problem is to take ownership of all files and folders to your account. To do this in Windows Explorer, right click on the root Cygwin folder, choose Properties, then the Security tab. If you are using Simple File Sharing, you will need to boot into Safe Mode to access the Security tab. Select Advanced, then go to the Owner tab and make sure your account is listed as the owner. Select the 'Replace owner on subcontainers and objects' checkbox and press Ok. After Explorer applies the changes you should be able to delete the entire tree in one operation. Note that you can also achieve by using other tools such as icacls.exe or directly from Cygwin by using chown. Please note that you shouldn't use the recursive form of chown on directories that have other file systems mounted under them (specifically you must avoid /proc) since you'd change ownership of the files under those mount points as well.</p>
+<p>Delete the Cygwin shortcuts on the Desktop and Start Menu, and anything left by setup-x86{_64}.exe in the download directory. However, if you plan to reinstall Cygwin it's a good idea to keep your setup-x86{_64}.exe download directory since you can reinstall the packages left in its cache without redownloading them.</p>
+<p>If you added Cygwin to your system path, you should remove it unless you plan to reinstall Cygwin to the same location. Similarly, if you set your CYGWIN environment variable system-wide and don't plan to reinstall, you should remove it.</p>
+<p>Finally, if you want to be thorough you can delete the registry tree Software\Cygwin under HKEY_LOCAL_MACHINE and/or HKEY_CURRENT_USER. However, if you followed the directions above you will have already removed everything important. Typically only the installation directory has been stored in the registry at all.</p>
+</blockquote>
+<p><br><br></p>
+<p>我的<a href="https://iseed.ml/">小站</a>、<a href="https://github.com/Ryyyc">Github</a>、<a href="https://blog.csdn.net/Ussim">CSDN</a></p>
+<p><br><br></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[python: Failed calling sys.__interactivehook__ (Windows)]]></title>
+        <id>https://Ryyyc.github.io/post/Python-failed-calling-sys__interactivehook__/</id>
+        <link href="https://Ryyyc.github.io/post/Python-failed-calling-sys__interactivehook__/">
+        </link>
+        <updated>2020-09-20T08:23:02.000Z</updated>
+        <summary type="html"><![CDATA[<br>
+<p>解决办法：将 <strong>C:\Users{username}</strong> 目录下的 <strong>.python_history</strong> 文件里面的<strong>中文</strong>删除</p>
+<br>
+]]></summary>
+        <content type="html"><![CDATA[<br>
+<p>解决办法：将 <strong>C:\Users{username}</strong> 目录下的 <strong>.python_history</strong> 文件里面的<strong>中文</strong>删除</p>
+<br>
+<!-- more -->
+<br>
+<p>进入 python 解释器 时出现 Failed calling sys.__interactivehook__ 错误</p>
+<pre><code>Microsoft Windows [版本 10.0.19042.508]
+(c) 2020 Microsoft Corporation. 保留所有权利。
+
+C:\Users\14298&gt;python
+Python 3.8.3 (default, Jul  2 2020, 17:30:36) [MSC v.1916 64 bit (AMD64)] :: Anaconda, Inc. on win32
+Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.
+Failed calling sys.__interactivehook__
+Traceback (most recent call last):
+  File &quot;D:\software\Environment\Anaconda3\lib\site.py&quot;, line 440, in register_readline
+    readline.read_history_file(history)
+  File &quot;D:\software\Environment\Anaconda3\lib\site-packages\pyreadline\rlmain.py&quot;, line 165, in read_history_file
+    self.mode._history.read_history_file(filename)
+  File &quot;D:\software\Environment\Anaconda3\lib\site-packages\pyreadline\lineeditor\history.py&quot;, line 82, in read_history_file
+    for line in open(filename, 'r'):
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xaf in position 536: illegal multibyte sequence
+&gt;&gt;&gt;
+</code></pre>
+<p><br><br></p>
+<p>问题来源：读取某个文件，其中包含了无法解析的编码（BGK，中文）</p>
+<p><br><br></p>
+<p>解决办法：将 <strong>C:\Users{username}</strong> 目录下的 <strong>.python_history</strong> 文件里面的<strong>中文</strong>删除</p>
+<p><br><br></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Windows 下 修改temp目录路径]]></title>
+        <id>https://Ryyyc.github.io/post/Windows-Tmp-Path/</id>
+        <link href="https://Ryyyc.github.io/post/Windows-Tmp-Path/">
+        </link>
+        <updated>2020-09-20T08:22:23.000Z</updated>
+        <summary type="html"><![CDATA[<br>
+<p>修改环境变量，<strong>用户变量</strong> 和 <strong>系统变量</strong> 的 变量 <strong>TEMP</strong>、<strong>TMP</strong> 的值改成新的路径即可</p>
+<br>
+]]></summary>
+        <content type="html"><![CDATA[<br>
+<p>修改环境变量，<strong>用户变量</strong> 和 <strong>系统变量</strong> 的 变量 <strong>TEMP</strong>、<strong>TMP</strong> 的值改成新的路径即可</p>
+<br>
+<!-- more -->
+<p><img src="https://img-blog.csdnimg.cn/20200915212617234.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1Vzc2lt,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" loading="lazy"><br>
+<br></p>
+<p>可以先去系统盘C盘把Temp目录清空，又可以释放一波C盘空间了</p>
+<p>一般位于<br>
+C:\Users{uername}\AppData\Local\Temp<br>
+C:\Windows\Temp</p>
+<p><br><br></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Windows下 更改 pip默认缓存目录]]></title>
+        <id>https://Ryyyc.github.io/post/Windows-Pip-Cache-Directory/</id>
+        <link href="https://Ryyyc.github.io/post/Windows-Pip-Cache-Directory/">
+        </link>
+        <updated>2020-09-20T08:21:10.000Z</updated>
+        <summary type="html"><![CDATA[<br>
+<p>windows下，pip的默认缓存目录为：&quot;<strong>C:\Users{username}\AppData\Local\pip\cache</strong>&quot;</p>
+<br>
+可以使用以下命令修改缓存目录
+<pre><code class="language-bash">pip config set global.cache-dir &quot;D:\\Data\\Temp\\pip\\cache&quot;
+</code></pre>
+]]></summary>
+        <content type="html"><![CDATA[<br>
+<p>windows下，pip的默认缓存目录为：&quot;<strong>C:\Users{username}\AppData\Local\pip\cache</strong>&quot;</p>
+<br>
+可以使用以下命令修改缓存目录
+<pre><code class="language-bash">pip config set global.cache-dir &quot;D:\\Data\\Temp\\pip\\cache&quot;
+</code></pre>
+<!-- more -->
+<br>
+<p>其中双引号里面即为自己新建的目录。<br>
+此时会在 <strong>&quot;C:\Users{username}\AppData\Roaming\pip&quot;</strong> 下生成<strong>pip.ini</strong>文件。</p>
+<br>
+<p>pip的默认缓存目录就改到了新建目录下了。</p>
+<br>
+<pre><code class="language-bash">Microsoft Windows [版本 10.0.19042.508]
+(c) 2020 Microsoft Corporation. 保留所有权利。
+
+C:\Users\14298&gt;pip config set global.cache-dir &quot;D:\\Data\\Temp\\pip\\cache&quot;
+Writing to C:\Users\14298\AppData\Roaming\pip\pip.ini
+</code></pre>
+<br>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[解决ssh连接Linux服务器经常掉线不稳定的问题]]></title>
+        <id>https://Ryyyc.github.io/post/Linux-SSH-Instable/</id>
+        <link href="https://Ryyyc.github.io/post/Linux-SSH-Instable/">
+        </link>
+        <updated>2020-09-15T13:21:58.000Z</updated>
+        <summary type="html"><![CDATA[<br>
+<p>修改 <strong>/etc/ssh</strong> 目录下的 <strong>sshd_config</strong> 配置文件</p>
+<br>
+]]></summary>
+        <content type="html"><![CDATA[<br>
+<p>修改 <strong>/etc/ssh</strong> 目录下的 <strong>sshd_config</strong> 配置文件</p>
+<br>
+<!-- more -->
+<p>添加/修改 这两行配置</p>
+<pre><code class="language-yaml"># 客户端每隔多少秒向服务发送一个心跳数据
+ClientAliveInterval 30
+# 客户端多少秒没有相应，服务器自动断掉连接
+ClientAliveCountMax 86400
+</code></pre>
+<br>
+<p>重启 sshd 服务</p>
+<pre><code class="language-bash">sudo systemctl restart sshd
+</code></pre>
+<br>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[C++ 输出当前所在的路径]]></title>
+        <id>https://Ryyyc.github.io/post/CPP-current-path/</id>
+        <link href="https://Ryyyc.github.io/post/CPP-current-path/">
+        </link>
+        <updated>2020-09-07T11:35:41.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="c-输出当前项目路径">C++ 输出当前项目路径</h1>
+<br>
+<p>代码：</p>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;filesystem&gt;
+using namespace std;
+
+int main() {
+    std::cout &lt;&lt; &quot;Current path is &quot; &lt;&lt; std::filesystem::current_path() &lt;&lt; '\n';
+    int n;
+    cin &gt;&gt; n;
+}
+</code></pre>
+<p><br><br></p>
+<p>PS:</p>
+<blockquote>
+<ol>
+<li>
+<p>filesystem 库 要求 C++ 标准至少为 17</p>
+</li>
+<li>
+<p>指定 C++ 标准 的方式</p>
+</li>
+</ol>
+<ul>
+<li>命令行编译：</li>
+</ul>
+<pre><code class="language-cpp">g++ main.cpp -o main -std=c++17
+</code></pre>
+<ul>
+<li>Clion：在 <strong>CMakeLists.txt</strong> 文件中 将 <strong>CMAKE_CXX_STANDAR</strong> 变量设置为 17</li>
+</ul>
+<pre><code class="language-cpp">set(CMAKE_CXX_STANDARD 17)
+</code></pre>
+</blockquote>
+<p><br><br></p>
+<p>我的<a href="https://iseed.ml/">小站</a>、<a href="https://github.com/Ryyyc">Github</a>、<a href="https://blog.csdn.net/Ussim">CSDN</a></p>
+<p><br><br></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Clion 2020.2 使用 C++20 等C++标准 编程]]></title>
+        <id>https://Ryyyc.github.io/post/CPP-std20/</id>
+        <link href="https://Ryyyc.github.io/post/CPP-std20/">
+        </link>
+        <updated>2020-09-07T11:35:12.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="clion-20202-使用-c20-等c标准-编程">Clion 2020.2 使用 C++20 等C++标准 编程</h1>
+<br>
+<p>操作步骤：</p>
+<br>
+<ul>
+<li>
+<p>新建工程<br>
+在新项目向导的语言标准字段中选择 C++ 20<br>
+<img src="https://img-blog.csdnimg.cn/20200907182913988.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1Vzc2lt,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" loading="lazy"></p>
+</li>
+<li>
+<p>已有工程<br>
+在 <strong>CMakeLists.txt</strong> 文件中 将 <strong>CMAKE_CXX_STANDAR</strong> 变量设置为 20</p>
+</li>
+</ul>
+<pre><code class="language-cpp">set(CMAKE_CXX_STANDARD 20)
+</code></pre>
+<p><br><br></p>
+<p><a href="https://www.jetbrains.com/help/clion/c-20-concepts.html">官方文档</a></p>
+<p><br><br></p>
+<p>我的<a href="https://iseed.ml/">小站</a>、<a href="https://github.com/Ryyyc">Github</a>、<a href="https://blog.csdn.net/Ussim">CSDN</a></p>
+<p><br><br></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Elastic：为 Elasticsearch 启动 https 访问使数据访问更安全]]></title>
+        <id>https://Ryyyc.github.io/post/Elasticsearch-Https/</id>
+        <link href="https://Ryyyc.github.io/post/Elasticsearch-Https/">
+        </link>
+        <updated>2020-09-07T11:34:23.000Z</updated>
+        <summary type="html"><![CDATA[<h1 id="elastic为-elasticsearch-启动-https-访问">Elastic：为 Elasticsearch 启动 https 访问</h1>
+<br>
+<p><strong>HTTPS</strong> （全称：Hyper Text Transfer Protocol over SecureSocket Layer），是以安全为目标的 HTTP 通道，在HTTP的基础上通过传输加密和身份认证保证了传输过程的安全性。在Elastic SIEM的安全领域，我们需要把 Elasticsearch 的访问变为 https 的访问，这样使得我们的数据更加安全可靠。</p>
+<p><br><br></p>
+<p>在为 Elasticsearch 启动 https 访问之前需要确保 已设置Elastic账户安全密码访问，可参考</p>
+<p><a href="https://blog.csdn.net/Ussim/article/details/108375933">Elasticsearch、Elasticsearch-head、Kibana 安全设置账号密码验证登陆</a></p>
+<br>
+]]></summary>
+        <content type="html"><![CDATA[<h1 id="elastic为-elasticsearch-启动-https-访问">Elastic：为 Elasticsearch 启动 https 访问</h1>
+<br>
+<p><strong>HTTPS</strong> （全称：Hyper Text Transfer Protocol over SecureSocket Layer），是以安全为目标的 HTTP 通道，在HTTP的基础上通过传输加密和身份认证保证了传输过程的安全性。在Elastic SIEM的安全领域，我们需要把 Elasticsearch 的访问变为 https 的访问，这样使得我们的数据更加安全可靠。</p>
+<p><br><br></p>
+<p>在为 Elasticsearch 启动 https 访问之前需要确保 已设置Elastic账户安全密码访问，可参考</p>
+<p><a href="https://blog.csdn.net/Ussim/article/details/108375933">Elasticsearch、Elasticsearch-head、Kibana 安全设置账号密码验证登陆</a></p>
+<br>
+<!-- more -->
+<br>
+<p>我的<a href="https://iseed.ml/">小站</a>、<a href="https://github.com/Ryyyc">Github</a>、<a href="https://blog.csdn.net/Ussim">CSDN</a></p>
+<p><br><br></p>
+<h2 id="elasticsearch">Elasticsearch</h2>
+<p>在 Elasticsearch 安装目录下运行以下命令</p>
+<pre><code class="language-bash"># 生成 p12 证书，生成elastic-stack-ca.p12文件
+./bin/elasticsearch-certutil ca 
+
+# 生成 证书和私钥，生成elastic-certificates.p12文件
+./bin/elasticsearch-certutil cert --ca elastic-stack-ca.p12 
+
+# 生成 newfile.crt.pem 文件
+openssl pkcs12 -in elastic-stack-ca.p12 -out newfile.crt.pem -clcerts -nokeys
+
+# 修改 elastic-certificates.p12 文件的读取权限
+chmod ugo+r elastic-certificates.p12
+
+# 将 elastic-certificates.p12 文件移动到 Elasticsearch 安装目录下的 config 子目录中
+mv elastic-certificates.p12 ./config
+
+
+# 修改 newfile.crt.pem 文件的读取权限
+chmod ugo+r newfile.crt.pem
+
+# 将 newfile.crt.pem 文件移动到 Kibana 安装目录下的 config 子目录中（注意改成自己的 kibana 目录）
+mv newfile.crt.pem /usr/local/environment/elk/kibana/kibana-7.8.0-linux-x86_64/config
+
+</code></pre>
+<p><br><br></p>
+<figure data-type="image" tabindex="1"><img src="https://img-blog.csdnimg.cn/20200905223020708.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1Vzc2lt,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" loading="lazy"></figure>
+<p><br><br></p>
+<p>文件名均使用缺省文件名，密码均为空（即直接按 Enter 键）</p>
+<br>
+<p>修改 Elasticsearch 安装目录下的 config 子目录下的 elasticsearch.yml 文件，添加/修改 以下配置</p>
+<pre><code class="language-yaml">xpack.security.http.ssl.enabled: true
+xpack.security.http.ssl.keystore.path: elastic-certificates.p12
+xpack.security.http.ssl.truststore.path: elastic-certificates.p12
+
+xpack.security.transport.ssl.verification_mode: certificate
+xpack.security.transport.ssl.keystore.path: elastic-certificates.p12
+xpack.security.transport.ssl.truststore.path: elastic-certificates.p12
+</code></pre>
+<br>
+<figure data-type="image" tabindex="2"><img src="https://img-blog.csdnimg.cn/20200905223030175.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1Vzc2lt,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" loading="lazy"></figure>
+<p><br><br></p>
+<h2 id="kibana">Kibana</h2>
+<p>修改 Kibana 安装目录下的 config 子目录下的 kibana.yml 文件，添加/修改 以下配置</p>
+<pre><code class="language-yaml">elasticsearch.hosts: [&quot;https://localhost:9200&quot;]
+elasticsearch.ssl.certificateAuthorities: [&quot;config/newfile.crt.pem&quot;]
+elasticsearch.ssl.verificationMode: none
+</code></pre>
+<br>
+<p>为了我们能够方便地访问，我们针对kibana不启用verificationMode</p>
+<br>
+<p>最后，我们重启 Elasticsearch 和 Kibana</p>
+<p><br><br></p>
+<p>更多详情请参考 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/configuring-tls.html">官方文档</a></p>
+<p><br><br></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Elasticsearch、Elasticsearch-head、Kibana 安全设置账号密码验证登陆]]></title>
+        <id>https://Ryyyc.github.io/post/elk-with-password/</id>
+        <link href="https://Ryyyc.github.io/post/elk-with-password/">
+        </link>
+        <updated>2020-09-03T03:35:07.000Z</updated>
+        <summary type="html"><![CDATA[<br>
+<p><strong>X-Pack</strong> 是 <strong>Elastic Stack</strong> 的一个扩展，提供安全性、警报、监视、报告、机器学习等功能。 安装 Elasticsearch 7.x 时，会默认安装X-Pack，无需单独安装，且基础级安全永久免费。</p>
+<br>
+]]></summary>
+        <content type="html"><![CDATA[<br>
+<p><strong>X-Pack</strong> 是 <strong>Elastic Stack</strong> 的一个扩展，提供安全性、警报、监视、报告、机器学习等功能。 安装 Elasticsearch 7.x 时，会默认安装X-Pack，无需单独安装，且基础级安全永久免费。</p>
+<br>
+<!--more-->
+<p>我的<a href="https://iseed.ml/">小站</a>、<a href="https://github.com/Ryyyc">Github</a>、<a href="https://blog.csdn.net/Ussim">CSDN</a></p>
+<p><br><br></p>
+<p>操作步骤：</p>
+<br>
+<ol>
+<li>在 elasticsearch 的 config 目录下的 elasticsearch.yml 的底部添加下面配置</li>
+</ol>
+<pre><code class="language-yaml">http.cors.allow-headers: Authorization,X-Requested-With,Content-Length,Content-Type
+
+xpack.security.enabled: true
+xpack.security.audit.enabled: true
+xpack.license.self_generated.type: basic
+xpack.security.transport.ssl.enabled: true
+</code></pre>
+<br>
+<figure data-type="image" tabindex="1"><img src="https://img-blog.csdnimg.cn/20200903094426449.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1Vzc2lt,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" loading="lazy"></figure>
+<p><br><br></p>
+<ol start="2">
+<li>使用 <strong>非root</strong> 用户 启动 elasticsearch 服务</li>
+</ol>
+<br>
+<ol start="3">
+<li>新开一个窗口 用 <strong>root</strong> 用户 在elasticsearch 根目录下运行以下命令</li>
+</ol>
+<pre><code class="language-bash">bin/elasticsearch-setup-passwords interactive
+</code></pre>
+<br>
+<p>输入 y 确认配置密码，然后按要求分别输入密码</p>
+<figure data-type="image" tabindex="2"><img src="https://img-blog.csdnimg.cn/20200903093807403.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1Vzc2lt,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" loading="lazy"></figure>
+<p><br><br></p>
+<ol start="4">
+<li>在 kibana 的 config 目录下的 kibana.yml 的底部添加下面配置，账号为 <strong>elastic</strong> ，密码为上面第3步为 elastic 设置的密码</li>
+</ol>
+<pre><code class="language-yaml"># 配置登陆账号密码
+elasticsearch.username: &quot;elastic&quot;
+elasticsearch.password: &quot;your_password&quot;
+</code></pre>
+<br>
+<ol start="5">
+<li>重启 elasticsearch、elasticsearch-head、kibana</li>
+</ol>
+<br>
+<ol start="6">
+<li>elasticsearch、kibana的访问方式照常，elasticsearch-head 的访问网址为</li>
+</ol>
+<pre><code class="language-http">http://&lt;服务器IP地址&gt;:9100/?auth_user=elastic&amp;auth_password=&lt;PASSWORD&gt;
+</code></pre>
+<br>
+<p>其中，账号密码为 第3步 设置的 elastic 和 它对应的密码</p>
+<p><br><br></p>
+<p>更多详情请参考 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/7.9/secure-cluster.html">官方文档</a></p>
+<p><br><br></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Linux 查看端口占用情况 并 结束进程]]></title>
+        <id>https://Ryyyc.github.io/post/linux-port-kill/</id>
+        <link href="https://Ryyyc.github.io/post/linux-port-kill/">
+        </link>
+        <updated>2020-09-03T03:30:06.000Z</updated>
+        <summary type="html"><![CDATA[<br>
+lsof -i:端口号
+kill -9 PID
+<br>
+]]></summary>
+        <content type="html"><![CDATA[<br>
+lsof -i:端口号
+kill -9 PID
+<br>
+<!--more-->
+<h1 id="原文linux-查看端口占用情况-并-结束进程">原文：Linux 查看端口占用情况 并 结束进程</h1>
+<br>
+<p>我的<a href="https://iseed.ml/">小站</a>、<a href="https://github.com/Ryyyc">Github</a>、<a href="https://blog.csdn.net/Ussim">CSDN</a></p>
+<p><br><br></p>
+<p>有时候使用 ps 命令无法检查出特定的进程，可考虑通过观察端口占用情况结束相关服务</p>
+<p><br><br></p>
+<p>Linux 查看端口占用情况可以使用 <strong>lsof</strong> 和 <strong>netstat</strong> 命令，结束进程用 <strong>kill</strong> 命令</p>
+<hr>
+<p><br><br></p>
+<h2 id="lsof">lsof</h2>
+<p><strong>lsof</strong>(list open files)列出当前系统打开的文件</p>
+<pre><code class="language-bash">lsof -i:端口号
+</code></pre>
+<p><br><br></p>
+<h2 id="netstat">netstat</h2>
+<p><strong>netstat -tunlp</strong> 用于显示 tcp，udp 的端口和进程等相关情况。</p>
+<pre><code>netstat -tunlp | grep 端口号
+</code></pre>
+<ul>
+<li>-t (tcp) 仅显示tcp相关选项</li>
+<li>-u (udp)仅显示udp相关选项</li>
+<li>-n 拒绝显示别名，能显示数字的全部转化为数字</li>
+<li>-l 仅列出在Listen(监听)的服务状态</li>
+<li>-p 显示建立相关链接的程序名</li>
+</ul>
+<p><br><br></p>
+<h2 id="kill">kill</h2>
+<p>在查到端口占用的进程后，如果你要杀掉对应的进程可以使用 kill 命令：</p>
+<pre><code>kill -9 PID
+</code></pre>
+<p><br><br></p>
+<figure data-type="image" tabindex="1"><img src="https://img-blog.csdnimg.cn/20200903111144991.png#pic_center" alt="在这里插入图片描述" loading="lazy"></figure>
+<p><br><br></p>
+]]></content>
+    </entry>
+</feed>

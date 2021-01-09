@@ -8,7 +8,7 @@
 <meta name="keywords" content="Gridea静态个人博客">
 <meta name="description" content="Root down，grow upward.">
 <meta name="theme-color" content="#000">
-<title>Windows 10 修改 Alt+Tab 键 切换 新版 Microsoft Edge 单个标签页/窗口 | Rme</title>
+<title>解决Github无法加载或不显示图片问题 | Rme</title>
 <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/Ryyyc/Ryyyc.github.io@V0.0.2/favicon.ico?v=1610183842226">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Ryyyc/Ryyyc.github.io@V0.0.2/media/css/gemini.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Ryyyc/Ryyyc.github.io@V0.0.2/media/fonts/font-awesome.css">
@@ -49,8 +49,8 @@
 
 
 
-  <meta name="description" content="Windows 10 修改 Alt+Tab 键 切换 新版 Microsoft Edge 单个标签页/窗口" />
-  <meta name="keywords" content="Windows" />
+  <meta name="description" content="解决Github无法加载或不显示图片问题" />
+  <meta name="keywords" content="GitHub" />
 </head>
 
 <body>
@@ -354,8 +354,8 @@
           <div class="section bg-color post post-page">
             <section class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://Ryyyc.github.io/post/Windows-Alt-Tab-Edge/">
-      Windows 10 修改 Alt+Tab 键 切换 新版 Microsoft Edge 单个标签页/窗口
+    <a class="post-title-link" href="https://Ryyyc.github.io/post/github-image-load-fail/">
+      解决Github无法加载或不显示图片问题
     </a>
   </h1>
   <div class="post-meta">
@@ -363,7 +363,7 @@
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span class="language" data-lan="publish">发布于</span>
-      <span class="publish-time" data-t="2020-08-30 11:18:38">2020-08-30</span>
+      <span class="publish-time" data-t="2021-01-09 17:13:36">2021-01-09</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
@@ -372,8 +372,8 @@
       <span class="pc-show language" data-lan="category-in">分类于</span>
       
       
-      <a href="https://Ryyyc.github.io/tag/UYAaNgx99/">
-        <span>Windows</span>
+      <a href="https://Ryyyc.github.io/tag/q5U9ddBvN/">
+        <span>GitHub</span>
       </a>
       
       
@@ -387,12 +387,12 @@
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>273<span class="pc-show language" data-lan="words">字数</span></span>
+      <span>231<span class="pc-show language" data-lan="words">字数</span></span>
     </span>
     
     
     
-    <span id="/post/Windows-Alt-Tab-Edge/" data-flag-title="Windows 10 修改 Alt+Tab 键 切换 新版 Microsoft Edge 单个标签页/窗口" class="meta-item pc-show leancloud_visitors">
+    <span id="/post/github-image-load-fail/" data-flag-title="解决Github无法加载或不显示图片问题" class="meta-item pc-show leancloud_visitors">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-eye"></i>
       <span><span class="language" data-lan="view">浏览量</span>：<span class="leancloud-visitors-count"></span></span>
@@ -402,30 +402,40 @@
 </section>
             <div class="post-body next-md-body" id="post_body">
               <br>
-<p>解决方案：在 <strong>Windows 设置</strong> 的搜索框中 搜索 <strong>alt</strong>，选择 <strong>选择按下 Alt+Tab 时显示的窗口和选项卡</strong>，将 <strong>按 Alt +Tab 将显示</strong> 选为 <strong>仅打开的窗口</strong></p>
+<p>Github无法加载或不显示图片，严重影响日常使用，可以通过修改 <em>hosts</em> 文件解决问题</p>
 <br>
-<!--more-->
-<p>我的<a href="https://iseed.ml/">小站</a>、<a href="https://github.com/Ryyyc">Github</a>、<a href="https://blog.csdn.net/Ussim">CSDN</a></p>
+<!-- more -->
+<p>hosts文件所在路径</p>
+<p>Mac              /etc/hosts<br>
+Linux           /etc/hosts<br>
+Windows    C:\Windows\System32\drivers\etc\hosts</p>
 <p><br><br></p>
-<p>详细过程：<br>
-<br></p>
-<p>在 Windows 10 Build 20161 中，微软更新了 Alt+Tab 的默认行为，切换界面中包括了 Microsoft Edge 的标签页面（Chromium版本），用户能够在应用程序、Edge 浏览器标签页之间进行切换。<br>
-<br></p>
-<p>但是当你打开太多的标签页和应用窗口的时候，Alt+Tab 视图就会变成这样</p>
-<figure data-type="image" tabindex="1"><img src="https://img-blog.csdnimg.cn/20200830093038337.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1Vzc2lt,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" loading="lazy"></figure>
-<br>
-<p>具有强迫症的我翻遍了 Microsoft Edge 的各种设置，都没有找到如何改成标签页合并成一个窗口的设置。</p>
+<p>在 hosts 文件末尾追加以下信息</p>
+<pre><code class="language-bash"># GitHub Start
+
+192.30.253.112 Build software better, together
+192.30.253.119 gist.github.com
+151.101.184.133 assets-cdn.github.com
+151.101.184.133 raw.githubusercontent.com
+151.101.184.133 gist.githubusercontent.com
+151.101.184.133 cloud.githubusercontent.com
+151.101.184.133 camo.githubusercontent.com
+151.101.184.133 avatars0.githubusercontent.com
+151.101.184.133 avatars1.githubusercontent.com
+151.101.184.133 avatars2.githubusercontent.com
+151.101.184.133 avatars3.githubusercontent.com
+151.101.184.133 avatars4.githubusercontent.com
+151.101.184.133 avatars5.githubusercontent.com
+151.101.184.133 avatars6.githubusercontent.com
+151.101.184.133 avatars7.githubusercontent.com
+151.101.184.133 avatars8.githubusercontent.com
+
+# GitHub End
+</code></pre>
 <p><br><br></p>
-<p>最后，在 Windows 设置 中找到了解决方案</p>
-<br>
-<p>在 <strong>Windows 设置</strong> 的搜索框中 搜索 <strong>alt</strong>，选择 <strong>选择按下 Alt+Tab 时显示的窗口和选项卡</strong><br>
-<br><br>
-<img src="https://img-blog.csdnimg.cn/20200830093320286.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1Vzc2lt,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" loading="lazy"><br>
-<br></p>
-<p>在 Alt +Tab 中 <strong>按 Alt +Tab 将显示</strong> 选为 <strong>仅打开的窗口</strong></p>
-<p><img src="https://img-blog.csdnimg.cn/20200830093554494.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1Vzc2lt,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" loading="lazy"><br>
-<br><br>
-这样按 Alt+Tab 的时候所有 Microsoft Edge 标签页就会合并成一个窗口了。</p>
+<p>如果由于权限出现修改 hosts 文件无法保存问题，可以先把 hosts 文件复制到另一个地方，修改后替换原 hosts 文件</p>
+<p><br><br></p>
+<p>我的<a href="https://ryyyc.github.io/">小站</a>、<a href="https://github.com/Ryyyc">Github</a>、<a href="https://blog.csdn.net/Ussim">CSDN</a></p>
 <p><br><br></p>
 
             </div>
@@ -439,7 +449,7 @@
     </li>
     <li class="post-copyright-link">
       <strong class="language" data-lan="link">本文链接：</strong>
-      <a href="https://Ryyyc.github.io/post/Windows-Alt-Tab-Edge/" title="Windows 10 修改 Alt+Tab 键 切换 新版 Microsoft Edge 单个标签页/窗口">https://Ryyyc.github.io/post/Windows-Alt-Tab-Edge/</a>
+      <a href="https://Ryyyc.github.io/post/github-image-load-fail/" title="解决Github无法加载或不显示图片问题">https://Ryyyc.github.io/post/github-image-load-fail/</a>
     </li>
     <li class="post-copyright-license">
       <strong class="language" data-lan="copyright">版权声明： </strong>
@@ -448,21 +458,17 @@
   </ul>
   <div class="tags">
     
-      <a href="https://Ryyyc.github.io/tag/UYAaNgx99/"># Windows</a>
+      <a href="https://Ryyyc.github.io/tag/q5U9ddBvN/"># GitHub</a>
     
   </div>
   <div class="nav">
     <div class="nav-prev">
       
-        <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" title="通俗易懂讲通 奇偶校验 (Parity Check) 和 汉明码 (海明码、Hamming Code)" href="https://Ryyyc.github.io/post/Parity-Check-and-Hamming-Code/">通俗易懂讲通 奇偶校验 (Parity Check) 和 汉明码 (海明码、Hamming Code)</a class="nav-pc-next">
-        <a class="nav-mobile-prev" title="通俗易懂讲通 奇偶校验 (Parity Check) 和 汉明码 (海明码、Hamming Code)" href="https://Ryyyc.github.io/post/Parity-Check-and-Hamming-Code/">上一篇</a>
-      
     </div>
     <div class="nav-next">
       
-        <a class="nav-pc-next" title="Windows 下 Anaconda3 的安装配置" href="https://Ryyyc.github.io/post/Windows-with-Anaconda3/">Windows 下 Anaconda3 的安装配置</a>
-        <a class="nav-mobile-next" title="Windows 下 Anaconda3 的安装配置" href="https://Ryyyc.github.io/post/Windows-with-Anaconda3/">下一篇</a>
+        <a class="nav-pc-next" title="windows10 下 用图片手把手教你 卸载 cygwin" href="https://Ryyyc.github.io/post/Windows10-Uninstall-Cygwin/">windows10 下 用图片手把手教你 卸载 cygwin</a>
+        <a class="nav-mobile-next" title="windows10 下 用图片手把手教你 卸载 cygwin" href="https://Ryyyc.github.io/post/Windows10-Uninstall-Cygwin/">下一篇</a>
         <i class="fa fa-chevron-right"></i>
       
     </div>

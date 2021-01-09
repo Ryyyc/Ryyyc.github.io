@@ -2,23 +2,76 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Ryyyc.github.io</id>
     <title>Rme</title>
-    <updated>2020-12-11T07:38:30.697Z</updated>
+    <updated>2021-01-09T09:18:05.804Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Ryyyc.github.io"/>
     <link rel="self" href="https://Ryyyc.github.io/atom.xml"/>
     <subtitle>Root down，grow upward.</subtitle>
     <logo>https://Ryyyc.github.io/images/avatar.png</logo>
     <icon>https://Ryyyc.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2020, Rme</rights>
+    <rights>All rights reserved 2021, Rme</rights>
+    <entry>
+        <title type="html"><![CDATA[解决Github无法加载或不显示图片问题]]></title>
+        <id>https://Ryyyc.github.io/post/github-image-load-fail/</id>
+        <link href="https://Ryyyc.github.io/post/github-image-load-fail/">
+        </link>
+        <updated>2021-01-09T09:13:36.000Z</updated>
+        <summary type="html"><![CDATA[<br>
+<p>Github无法加载或不显示图片，严重影响日常使用，可以通过修改 <em>hosts</em> 文件解决问题</p>
+<br>
+]]></summary>
+        <content type="html"><![CDATA[<br>
+<p>Github无法加载或不显示图片，严重影响日常使用，可以通过修改 <em>hosts</em> 文件解决问题</p>
+<br>
+<!-- more -->
+<p>hosts文件所在路径</p>
+<p>Mac              /etc/hosts<br>
+Linux           /etc/hosts<br>
+Windows    C:\Windows\System32\drivers\etc\hosts</p>
+<p><br><br></p>
+<p>在 hosts 文件末尾追加以下信息</p>
+<pre><code class="language-bash"># GitHub Start
+
+192.30.253.112 Build software better, together
+192.30.253.119 gist.github.com
+151.101.184.133 assets-cdn.github.com
+151.101.184.133 raw.githubusercontent.com
+151.101.184.133 gist.githubusercontent.com
+151.101.184.133 cloud.githubusercontent.com
+151.101.184.133 camo.githubusercontent.com
+151.101.184.133 avatars0.githubusercontent.com
+151.101.184.133 avatars1.githubusercontent.com
+151.101.184.133 avatars2.githubusercontent.com
+151.101.184.133 avatars3.githubusercontent.com
+151.101.184.133 avatars4.githubusercontent.com
+151.101.184.133 avatars5.githubusercontent.com
+151.101.184.133 avatars6.githubusercontent.com
+151.101.184.133 avatars7.githubusercontent.com
+151.101.184.133 avatars8.githubusercontent.com
+
+# GitHub End
+</code></pre>
+<p><br><br></p>
+<p>如果由于权限出现修改 hosts 文件无法保存问题，可以先把 hosts 文件复制到另一个地方，修改后替换原 hosts 文件</p>
+<p><br><br></p>
+<p>我的<a href="https://ryyyc.github.io/">小站</a>、<a href="https://github.com/Ryyyc">Github</a>、<a href="https://blog.csdn.net/Ussim">CSDN</a></p>
+<p><br><br></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[windows10 下 用图片手把手教你 卸载 cygwin]]></title>
         <id>https://Ryyyc.github.io/post/Windows10-Uninstall-Cygwin/</id>
         <link href="https://Ryyyc.github.io/post/Windows10-Uninstall-Cygwin/">
         </link>
         <updated>2020-09-20T08:25:52.000Z</updated>
+        <summary type="html"><![CDATA[<h1 id="windows10-下-卸载-cygwin">windows10 下 卸载 cygwin</h1>
+<p><br><br></p>
+<p>进入 <a href="https://cygwin.com/install.html">官方</a>， 下载符合自己操作系统的 Cygwin 安装程序（这个程序包含了 Cygwin 的安装、更新、卸载功能）</p>
+]]></summary>
         <content type="html"><![CDATA[<h1 id="windows10-下-卸载-cygwin">windows10 下 卸载 cygwin</h1>
 <p><br><br></p>
 <p>进入 <a href="https://cygwin.com/install.html">官方</a>， 下载符合自己操作系统的 Cygwin 安装程序（这个程序包含了 Cygwin 的安装、更新、卸载功能）</p>
+<!-- more -->
 <figure data-type="image" tabindex="1"><img src="https://img-blog.csdnimg.cn/20200920161438817.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1Vzc2lt,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" loading="lazy"></figure>
 <br>
 <p>打开 Cygwin 安装程序，点击 <strong>下一步</strong></p>
@@ -416,57 +469,6 @@ elasticsearch.password: &quot;your_password&quot;
 <p>其中，账号密码为 第3步 设置的 elastic 和 它对应的密码</p>
 <p><br><br></p>
 <p>更多详情请参考 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/7.9/secure-cluster.html">官方文档</a></p>
-<p><br><br></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Linux 查看端口占用情况 并 结束进程]]></title>
-        <id>https://Ryyyc.github.io/post/linux-port-kill/</id>
-        <link href="https://Ryyyc.github.io/post/linux-port-kill/">
-        </link>
-        <updated>2020-09-03T03:30:06.000Z</updated>
-        <summary type="html"><![CDATA[<br>
-lsof -i:端口号
-kill -9 PID
-<br>
-]]></summary>
-        <content type="html"><![CDATA[<br>
-lsof -i:端口号
-kill -9 PID
-<br>
-<!--more-->
-<h1 id="原文linux-查看端口占用情况-并-结束进程">原文：Linux 查看端口占用情况 并 结束进程</h1>
-<br>
-<p>我的<a href="https://iseed.ml/">小站</a>、<a href="https://github.com/Ryyyc">Github</a>、<a href="https://blog.csdn.net/Ussim">CSDN</a></p>
-<p><br><br></p>
-<p>有时候使用 ps 命令无法检查出特定的进程，可考虑通过观察端口占用情况结束相关服务</p>
-<p><br><br></p>
-<p>Linux 查看端口占用情况可以使用 <strong>lsof</strong> 和 <strong>netstat</strong> 命令，结束进程用 <strong>kill</strong> 命令</p>
-<hr>
-<p><br><br></p>
-<h2 id="lsof">lsof</h2>
-<p><strong>lsof</strong>(list open files)列出当前系统打开的文件</p>
-<pre><code class="language-bash">lsof -i:端口号
-</code></pre>
-<p><br><br></p>
-<h2 id="netstat">netstat</h2>
-<p><strong>netstat -tunlp</strong> 用于显示 tcp，udp 的端口和进程等相关情况。</p>
-<pre><code>netstat -tunlp | grep 端口号
-</code></pre>
-<ul>
-<li>-t (tcp) 仅显示tcp相关选项</li>
-<li>-u (udp)仅显示udp相关选项</li>
-<li>-n 拒绝显示别名，能显示数字的全部转化为数字</li>
-<li>-l 仅列出在Listen(监听)的服务状态</li>
-<li>-p 显示建立相关链接的程序名</li>
-</ul>
-<p><br><br></p>
-<h2 id="kill">kill</h2>
-<p>在查到端口占用的进程后，如果你要杀掉对应的进程可以使用 kill 命令：</p>
-<pre><code>kill -9 PID
-</code></pre>
-<p><br><br></p>
-<figure data-type="image" tabindex="1"><img src="https://img-blog.csdnimg.cn/20200903111144991.png#pic_center" alt="在这里插入图片描述" loading="lazy"></figure>
 <p><br><br></p>
 ]]></content>
     </entry>

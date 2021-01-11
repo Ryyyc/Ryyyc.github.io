@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Ryyyc.github.io</id>
     <title>Rme</title>
-    <updated>2021-01-09T09:18:05.804Z</updated>
+    <updated>2021-01-11T15:09:49.122Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Ryyyc.github.io"/>
     <link rel="self" href="https://Ryyyc.github.io/atom.xml"/>
@@ -10,6 +10,105 @@
     <logo>https://Ryyyc.github.io/images/avatar.png</logo>
     <icon>https://Ryyyc.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Rme</rights>
+    <entry>
+        <title type="html"><![CDATA[Github 个人首页档案资料卡 README 自述文件]]></title>
+        <id>https://Ryyyc.github.io/post/github-homepage-readme/</id>
+        <link href="https://Ryyyc.github.io/post/github-homepage-readme/">
+        </link>
+        <updated>2021-01-11T15:08:21.000Z</updated>
+        <summary type="html"><![CDATA[<br>
+<p>最近偶然发现别人的 Github 首页长这样，觉得超级不错，于是赶紧去弄了一个，顺便记录下来。</p>
+<br>
+<p><img src="https://img-blog.csdnimg.cn/20210111223758589.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1Vzc2lt,size_16,color_FFFFFF,t_70#pic_center" alt="Overview" loading="lazy"><br>
+<br></p>
+<p>现在想要丰富 Github 的首页其实很简单，只需要新建一个仓库名 和自己 Github 用户名相同的仓库并且添加一个 README.md 文件</p>
+]]></summary>
+        <content type="html"><![CDATA[<br>
+<p>最近偶然发现别人的 Github 首页长这样，觉得超级不错，于是赶紧去弄了一个，顺便记录下来。</p>
+<br>
+<p><img src="https://img-blog.csdnimg.cn/20210111223758589.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1Vzc2lt,size_16,color_FFFFFF,t_70#pic_center" alt="Overview" loading="lazy"><br>
+<br></p>
+<p>现在想要丰富 Github 的首页其实很简单，只需要新建一个仓库名 和自己 Github 用户名相同的仓库并且添加一个 README.md 文件</p>
+<!-- more -->
+<p><br><br></p>
+<h3 id="新建仓库">新建仓库</h3>
+<p>新建与用户名同名的仓库并添加README文件<br>
+<img src="https://img-blog.csdnimg.cn/20210111224314730.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1Vzc2lt,size_16,color_FFFFFF,t_70#pic_center" alt="New repository" loading="lazy"></p>
+<p><br><br></p>
+<h3 id="编辑readme">编辑README</h3>
+<figure data-type="image" tabindex="1"><img src="https://img-blog.csdnimg.cn/20210111224602758.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1Vzc2lt,size_16,color_FFFFFF,t_70#pic_center" alt="Edit README" loading="lazy"></figure>
+<p>编写 README 文件</p>
+<p><img src="https://img-blog.csdnimg.cn/20210111224734757.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1Vzc2lt,size_16,color_FFFFFF,t_70#pic_center" alt="Edit README" loading="lazy"><br>
+<br></p>
+<p>预览</p>
+<p><img src="https://img-blog.csdnimg.cn/2021011122475553.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1Vzc2lt,size_16,color_FFFFFF,t_70#pic_center" alt="Preview" loading="lazy"><br>
+<br></p>
+<p>提交</p>
+<figure data-type="image" tabindex="2"><img src="https://img-blog.csdnimg.cn/20210111224825808.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1Vzc2lt,size_16,color_FFFFFF,t_70#pic_center" alt="Commit" loading="lazy"></figure>
+<p><br><br><br></p>
+<h3 id="readme-文件内容">README 文件内容</h3>
+<br>
+<p>添加Github统计卡</p>
+<pre><code>[![Github stats](https://github-readme-stats.vercel.app/api?username=YourUsername&amp;show_icons=true&amp;include_all_commits=true)](https://github.com/YourUsername/github-readme-stats)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=YourUsername&amp;layout=compact)](https://github.com/YourUsername/github-readme-stats)
+</code></pre>
+<br>
+<p>将仓库固定在首页</p>
+<pre><code>![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=YourUsername&amp;repo=YourRepositoryName)
+</code></pre>
+<p><br><br></p>
+<p>注意将  <strong>YourUsername</strong>  更改为自己的Github用户名，<strong>YourRepositoryName</strong> 更改为自己的仓库名</p>
+<p><br><br></p>
+<p>我的README文件</p>
+<pre><code>## Hey 👋, This is Ruan
+
+[![Mail Badge](https://img.shields.io/badge/-11812109@mail.sustech.edu.cn-c14438?style=flat&amp;logo=Gmail&amp;logoColor=white&amp;link=mailto:11812109@mail.sustech.edu.cn)](mailto:11812109@mail.sustech.edu.cn) [![Github Badge](https://img.shields.io/badge/-ryyyc-grey?style=flat&amp;logo=github&amp;logoColor=white&amp;link=https://github.com/ryyyc/)](https://www.github.com/ryyyc/)
+## Some of my Github Stats
+&lt;p align=left&gt; &lt;img src=https://komarev.com/ghpvc/?username=ryyyc alt=ryyyc /&gt; &lt;/p&gt;
+
+&lt;a href=&quot;https://github.com/ryyyc&quot;&gt;
+  &lt;img align=&quot;center&quot; alt=&quot;GitHub Stats&quot; src=&quot;https://github-readme-stats.vercel.app/api?username=ryyyc&amp;show_icons=true&amp;include_all_commits=true&quot; /&gt;
+&lt;/a&gt;
+&lt;a href=&quot;https://github.com/ryyyc&quot;&gt;
+  &lt;img align=&quot;center&quot; alt=&quot;Top Langs&quot; src=&quot;https://github-readme-stats.vercel.app/api/top-langs/?username=ryyyc&amp;layout=compact&quot; /&gt;
+&lt;/a&gt;
+
+Languages and Tools:
+
+&lt;code&gt;&lt;img height=&quot;20&quot; src=&quot;https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/java/java.png&quot; alt=&quot;java&quot;&gt;&lt;/code&gt;
+&lt;code&gt;&lt;img height=&quot;20&quot; src=&quot;https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/python/python.png&quot; alt=&quot;python&quot;&gt;&lt;/code&gt;
+&lt;code&gt;&lt;img height=&quot;20&quot; src=&quot;https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/cpp/cpp.png&quot; alt=&quot;cpp&quot;&gt;&lt;/code&gt;
+
+
+&lt;!--
+**Ryyyc/ryyyc** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+
+Here are some ideas to get you started:
+
+- 🔭 I’m currently working on ...
+- 🌱 I’m currently learning ...
+- 👯 I’m looking to collaborate on ...
+- 🤔 I’m looking for help with ...
+- 💬 Ask me about ...
+- 📫 How to reach me: ...
+- 😄 Pronouns: ...
+- ⚡ Fun fact: ...
+--&gt;
+</code></pre>
+<p><br><br></p>
+<p>更多请参考 <a href="https://github.com/anuraghazra/github-readme-stats">github-readme-stats</a></p>
+<p><br><br></p>
+<h3 id="开启关闭-资料卡">开启/关闭 资料卡</h3>
+<p>如果希望 Github 首页开启这样的资料卡，必须保证</p>
+<ul>
+<li>有一个仓库的仓库名和自己用户名相同</li>
+<li>该仓库存在 README 文件 且 不为空</li>
+<li>该仓库是公开的</li>
+</ul>
+<p>换句话说，如果希望关闭资料卡的展示，只需要不满足以上任意条件即可</p>
+<p><br><br></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[解决Github无法加载或不显示图片问题]]></title>
         <id>https://Ryyyc.github.io/post/github-image-load-fail/</id>
@@ -401,74 +500,6 @@ elasticsearch.ssl.verificationMode: none
 <p>最后，我们重启 Elasticsearch 和 Kibana</p>
 <p><br><br></p>
 <p>更多详情请参考 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/configuring-tls.html">官方文档</a></p>
-<p><br><br></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Elasticsearch、Elasticsearch-head、Kibana 安全设置账号密码验证登陆]]></title>
-        <id>https://Ryyyc.github.io/post/elk-with-password/</id>
-        <link href="https://Ryyyc.github.io/post/elk-with-password/">
-        </link>
-        <updated>2020-09-03T03:35:07.000Z</updated>
-        <summary type="html"><![CDATA[<br>
-<p><strong>X-Pack</strong> 是 <strong>Elastic Stack</strong> 的一个扩展，提供安全性、警报、监视、报告、机器学习等功能。 安装 Elasticsearch 7.x 时，会默认安装X-Pack，无需单独安装，且基础级安全永久免费。</p>
-<br>
-]]></summary>
-        <content type="html"><![CDATA[<br>
-<p><strong>X-Pack</strong> 是 <strong>Elastic Stack</strong> 的一个扩展，提供安全性、警报、监视、报告、机器学习等功能。 安装 Elasticsearch 7.x 时，会默认安装X-Pack，无需单独安装，且基础级安全永久免费。</p>
-<br>
-<!--more-->
-<p>我的<a href="https://iseed.ml/">小站</a>、<a href="https://github.com/Ryyyc">Github</a>、<a href="https://blog.csdn.net/Ussim">CSDN</a></p>
-<p><br><br></p>
-<p>操作步骤：</p>
-<br>
-<ol>
-<li>在 elasticsearch 的 config 目录下的 elasticsearch.yml 的底部添加下面配置</li>
-</ol>
-<pre><code class="language-yaml">http.cors.allow-headers: Authorization,X-Requested-With,Content-Length,Content-Type
-
-xpack.security.enabled: true
-xpack.security.audit.enabled: true
-xpack.license.self_generated.type: basic
-xpack.security.transport.ssl.enabled: true
-</code></pre>
-<br>
-<figure data-type="image" tabindex="1"><img src="https://img-blog.csdnimg.cn/20200903094426449.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1Vzc2lt,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" loading="lazy"></figure>
-<p><br><br></p>
-<ol start="2">
-<li>使用 <strong>非root</strong> 用户 启动 elasticsearch 服务</li>
-</ol>
-<br>
-<ol start="3">
-<li>新开一个窗口 用 <strong>root</strong> 用户 在elasticsearch 根目录下运行以下命令</li>
-</ol>
-<pre><code class="language-bash">bin/elasticsearch-setup-passwords interactive
-</code></pre>
-<br>
-<p>输入 y 确认配置密码，然后按要求分别输入密码</p>
-<figure data-type="image" tabindex="2"><img src="https://img-blog.csdnimg.cn/20200903093807403.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1Vzc2lt,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" loading="lazy"></figure>
-<p><br><br></p>
-<ol start="4">
-<li>在 kibana 的 config 目录下的 kibana.yml 的底部添加下面配置，账号为 <strong>elastic</strong> ，密码为上面第3步为 elastic 设置的密码</li>
-</ol>
-<pre><code class="language-yaml"># 配置登陆账号密码
-elasticsearch.username: &quot;elastic&quot;
-elasticsearch.password: &quot;your_password&quot;
-</code></pre>
-<br>
-<ol start="5">
-<li>重启 elasticsearch、elasticsearch-head、kibana</li>
-</ol>
-<br>
-<ol start="6">
-<li>elasticsearch、kibana的访问方式照常，elasticsearch-head 的访问网址为</li>
-</ol>
-<pre><code class="language-http">http://&lt;服务器IP地址&gt;:9100/?auth_user=elastic&amp;auth_password=&lt;PASSWORD&gt;
-</code></pre>
-<br>
-<p>其中，账号密码为 第3步 设置的 elastic 和 它对应的密码</p>
-<p><br><br></p>
-<p>更多详情请参考 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/7.9/secure-cluster.html">官方文档</a></p>
 <p><br><br></p>
 ]]></content>
     </entry>

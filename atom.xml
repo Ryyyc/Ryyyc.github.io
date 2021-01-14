@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Ryyyc.github.io</id>
     <title>Rme</title>
-    <updated>2021-01-11T15:09:49.122Z</updated>
+    <updated>2021-01-14T03:27:03.156Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Ryyyc.github.io"/>
     <link rel="self" href="https://Ryyyc.github.io/atom.xml"/>
@@ -152,6 +152,8 @@ Windows    C:\Windows\System32\drivers\etc\hosts</p>
 </code></pre>
 <p><br><br></p>
 <p>如果由于权限出现修改 hosts 文件无法保存问题，可以先把 hosts 文件复制到另一个地方，修改后替换原 hosts 文件</p>
+<p><br><br></p>
+<p>如果一段时间后该方法失效，需要去查询到最新的 github 图片服务器地址，比如 在 这里 查询 avatars0.githubusercontent.com 的 ip ， 将新查询到的 ip 替换掉旧的 ip （avatars0~8的全部替换）</p>
 <p><br><br></p>
 <p>我的<a href="https://ryyyc.github.io/">小站</a>、<a href="https://github.com/Ryyyc">Github</a>、<a href="https://blog.csdn.net/Ussim">CSDN</a></p>
 <p><br><br></p>

@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://Ryyyc.github.io</id>
     <title>Rme</title>
-    <updated>2021-01-14T03:27:03.156Z</updated>
+    <updated>2021-01-21T14:42:04.797Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://Ryyyc.github.io"/>
     <link rel="self" href="https://Ryyyc.github.io/atom.xml"/>
@@ -10,6 +10,108 @@
     <logo>https://Ryyyc.github.io/images/avatar.png</logo>
     <icon>https://Ryyyc.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Rme</rights>
+    <entry>
+        <title type="html"><![CDATA[通过 SSH 连接到 VMware NAT 模式下的 Ubuntu 虚拟机环境]]></title>
+        <id>https://Ryyyc.github.io/post/SSH-VMware-NAT-Ubuntu/</id>
+        <link href="https://Ryyyc.github.io/post/SSH-VMware-NAT-Ubuntu/">
+        </link>
+        <updated>2021-01-21T14:40:57.000Z</updated>
+        <summary type="html"><![CDATA[<br>
+<p>VMware <code>NAT 模式</code> 可以设置主机与虚拟机环境IP、端口的映射，虚拟环境中 SSH 使用 22 端口，只需要将宿主机设置成转发到虚拟机环境的 22 端口。</p>
+]]></summary>
+        <content type="html"><![CDATA[<br>
+<p>VMware <code>NAT 模式</code> 可以设置主机与虚拟机环境IP、端口的映射，虚拟环境中 SSH 使用 22 端口，只需要将宿主机设置成转发到虚拟机环境的 22 端口。</p>
+<!-- more -->
+<br>
+<p>具体步骤：</p>
+<br>
+<p>打开 <code>VMware 菜单-&gt;编辑-&gt;虚拟网络编辑器</code> ，选中 <code>VMnet8</code> ，点击下面的 <code>更改设置</code>，<code>NAT 设置</code></p>
+<figure data-type="image" tabindex="1"><img src="https://img-blog.csdnimg.cn/20210121222938298.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1Vzc2lt,size_16,color_FFFFFF,t_70#pic_center" alt="虚拟网络编辑器" loading="lazy"></figure>
+<p><br><br></p>
+<p>在 <code>NAT设置</code> 中添加 <code>端口转发</code>，主机端口 即宿主机用来连接虚拟环境的端口，虚拟机环境的 IP 地址 则是想要连接的 虚拟机环境的 IP 地址（Linux 可以通过 ifconfig 查看，Windows 可以通过 ipconfig 查看），此虚拟机环境需要开启 SSH 服务</p>
+<br>
+<figure data-type="image" tabindex="2"><img src="https://img-blog.csdnimg.cn/20210121223430867.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1Vzc2lt,size_16,color_FFFFFF,t_70#pic_center" alt="ifconfig" loading="lazy"></figure>
+<br>
+<figure data-type="image" tabindex="3"><img src="https://img-blog.csdnimg.cn/20210121222956561.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1Vzc2lt,size_16,color_FFFFFF,t_70#pic_center" alt="NAT 设置" loading="lazy"></figure>
+<p><br><br></p>
+<p>上面的设置可用通过 SSH 工具连接虚拟环境，比如 Windows 宿主机的 cmd</p>
+<pre><code class="language-bash">ssh ruan@127.0.0.1 -p 2222
+</code></pre>
+<p><br><br></p>
+<p>PS:</p>
+<br>
+<p>检查 SSH 服务是否安装且开启</p>
+<pre><code class="language-bash">ps -e | grep ssh
+</code></pre>
+<p>如果有输出 sshd 证明已经开启ssh服务</p>
+<br>
+<p>Linux 系统安装 openssh-server</p>
+<pre><code class="language-bash">sudo apt-get install openssh-server
+</code></pre>
+<p><br><br></p>
+<p>我的<a href="https://ryyyc.github.io/">小站</a>、<a href="https://github.com/Ryyyc">Github</a>、<a href="https://blog.csdn.net/Ussim">CSDN</a></p>
+<p><br><br></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[GitHub + jsDelivr + PicGo 搭建个人图床]]></title>
+        <id>https://Ryyyc.github.io/post/github-jsdelivr-picgo-image-hosting/</id>
+        <link href="https://Ryyyc.github.io/post/github-jsdelivr-picgo-image-hosting/">
+        </link>
+        <updated>2021-01-21T14:39:14.000Z</updated>
+        <content type="html"><![CDATA[<br>
+<p>具体步骤：</p>
+<br>
+<h3 id="github-仓库">Github 仓库</h3>
+<p>新建一个 public 的 Github 仓库，参照 <a href="https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line">官方文档</a> 生成一个 <code>token密钥</code></p>
+<p><br><br></p>
+<h3 id="picgo">PicGo</h3>
+<p>下载 <a href="https://github.com/Molunerfinn/picgo/releases">PicGo</a> ，安装完成后打开，图床设置 选 <strong>GitHub图床</strong>，并填写相应的信息</p>
+<ul>
+<li>设定仓库名：上面新建的 Github 仓库，格式：<code>&lt;用户名&gt;/&lt;仓库名&gt;</code></li>
+<li>设定分支名：填写主分支名，比如 <code>main</code></li>
+<li>设定Token：上面生成的 <code>token密钥</code></li>
+<li>指定存储路径：指定存储在GitHub对应仓库的路径，比如 <code>img/</code></li>
+<li>设定自定义域名：图片上传后，PicGo 会按照 自定义域名+上传的图片名 的方式生成访问链接，填写 <a href="https://www.jsdelivr.com/">jsDelivr</a> 的CDN加速地址即可，格式：<code>https://cdn.jsdelivr.net/gh/&lt;用户名&gt;/&lt;仓库名&gt;</code>  (路径<code>/gh/</code>表示使用的GitHub仓库)</li>
+</ul>
+<figure data-type="image" tabindex="1"><img src="https://img-blog.csdnimg.cn/20210121222455801.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1Vzc2lt,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" loading="lazy"></figure>
+<p><br><br></p>
+<p>配置好PicGo后就可以拖动本地图片到 PicGo 上传区上传图片到 Github 仓库了</p>
+<ul>
+<li>
+<p>如果使用 <a href="https://www.typora.io/">Typora</a> 写 Markdown 博客，可以在 <code>菜单栏 -&gt; 格式 -&gt; 图像 -&gt; 全局图像设置.. -&gt; 上传服务设定</code> 中设置 PicGo 为上传服务并指定 PicGo 启动路径</p>
+</li>
+<li>
+<p>图片名最好是英文并且尽量不要包含空格等特殊字符</p>
+</li>
+<li>
+<p>使用 QQ <code>Ctrl + Alt + A</code> 截图， <code>Ctrl + V</code> 粘贴到 Typora 很便捷，可以考虑 <a href="https://blog.csdn.net/Ussim/article/details/112755216">这样</a> 修改 QQ截图自动命名规则： 进入 QQ安装目录下的 <strong>I18N\2052\StringBundle.xml</strong> 文件，搜索 “QQ截图” 并替换成自定义的命名前缀</p>
+</li>
+</ul>
+<p><br><br></p>
+<p><a href="https://picgo.github.io/PicGo-Doc/zh/guide/">PicGo 官方文档</a></p>
+<br>
+<p>我的<a href="https://ryyyc.github.io/">小站</a>、<a href="https://github.com/Ryyyc">Github</a>、<a href="https://blog.csdn.net/Ussim">CSDN</a></p>
+<p><br><br></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[修改QQ截图自动命名规则]]></title>
+        <id>https://Ryyyc.github.io/post/QQ-screenshot-rename/</id>
+        <link href="https://Ryyyc.github.io/post/QQ-screenshot-rename/">
+        </link>
+        <updated>2021-01-21T14:38:04.000Z</updated>
+        <summary type="html"><![CDATA[<br>
+<p>进入 QQ安装目录下的  <strong>I18N\2052\StringBundle.xml</strong>  文件，搜索 “QQ截图” 并替换成自定义的命名前缀</p>
+]]></summary>
+        <content type="html"><![CDATA[<br>
+<p>进入 QQ安装目录下的  <strong>I18N\2052\StringBundle.xml</strong>  文件，搜索 “QQ截图” 并替换成自定义的命名前缀</p>
+<!-- more -->
+<br>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/ff513fbd9f2e45f0d3dbcf9833a320cb.png" alt="img20210117175556" loading="lazy"><br>
+<br><br></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Github 个人首页档案资料卡 README 自述文件]]></title>
         <id>https://Ryyyc.github.io/post/github-homepage-readme/</id>
@@ -345,164 +447,6 @@ ClientAliveCountMax 86400
 <pre><code class="language-bash">sudo systemctl restart sshd
 </code></pre>
 <br>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[C++ 输出当前所在的路径]]></title>
-        <id>https://Ryyyc.github.io/post/CPP-current-path/</id>
-        <link href="https://Ryyyc.github.io/post/CPP-current-path/">
-        </link>
-        <updated>2020-09-07T11:35:41.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="c-输出当前项目路径">C++ 输出当前项目路径</h1>
-<br>
-<p>代码：</p>
-<pre><code class="language-cpp">#include &lt;iostream&gt;
-#include &lt;filesystem&gt;
-using namespace std;
-
-int main() {
-    std::cout &lt;&lt; &quot;Current path is &quot; &lt;&lt; std::filesystem::current_path() &lt;&lt; '\n';
-    int n;
-    cin &gt;&gt; n;
-}
-</code></pre>
-<p><br><br></p>
-<p>PS:</p>
-<blockquote>
-<ol>
-<li>
-<p>filesystem 库 要求 C++ 标准至少为 17</p>
-</li>
-<li>
-<p>指定 C++ 标准 的方式</p>
-</li>
-</ol>
-<ul>
-<li>命令行编译：</li>
-</ul>
-<pre><code class="language-cpp">g++ main.cpp -o main -std=c++17
-</code></pre>
-<ul>
-<li>Clion：在 <strong>CMakeLists.txt</strong> 文件中 将 <strong>CMAKE_CXX_STANDAR</strong> 变量设置为 17</li>
-</ul>
-<pre><code class="language-cpp">set(CMAKE_CXX_STANDARD 17)
-</code></pre>
-</blockquote>
-<p><br><br></p>
-<p>我的<a href="https://iseed.ml/">小站</a>、<a href="https://github.com/Ryyyc">Github</a>、<a href="https://blog.csdn.net/Ussim">CSDN</a></p>
-<p><br><br></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Clion 2020.2 使用 C++20 等C++标准 编程]]></title>
-        <id>https://Ryyyc.github.io/post/CPP-std20/</id>
-        <link href="https://Ryyyc.github.io/post/CPP-std20/">
-        </link>
-        <updated>2020-09-07T11:35:12.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="clion-20202-使用-c20-等c标准-编程">Clion 2020.2 使用 C++20 等C++标准 编程</h1>
-<br>
-<p>操作步骤：</p>
-<br>
-<ul>
-<li>
-<p>新建工程<br>
-在新项目向导的语言标准字段中选择 C++ 20<br>
-<img src="https://img-blog.csdnimg.cn/20200907182913988.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1Vzc2lt,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" loading="lazy"></p>
-</li>
-<li>
-<p>已有工程<br>
-在 <strong>CMakeLists.txt</strong> 文件中 将 <strong>CMAKE_CXX_STANDAR</strong> 变量设置为 20</p>
-</li>
-</ul>
-<pre><code class="language-cpp">set(CMAKE_CXX_STANDARD 20)
-</code></pre>
-<p><br><br></p>
-<p><a href="https://www.jetbrains.com/help/clion/c-20-concepts.html">官方文档</a></p>
-<p><br><br></p>
-<p>我的<a href="https://iseed.ml/">小站</a>、<a href="https://github.com/Ryyyc">Github</a>、<a href="https://blog.csdn.net/Ussim">CSDN</a></p>
-<p><br><br></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Elastic：为 Elasticsearch 启动 https 访问使数据访问更安全]]></title>
-        <id>https://Ryyyc.github.io/post/Elasticsearch-Https/</id>
-        <link href="https://Ryyyc.github.io/post/Elasticsearch-Https/">
-        </link>
-        <updated>2020-09-07T11:34:23.000Z</updated>
-        <summary type="html"><![CDATA[<h1 id="elastic为-elasticsearch-启动-https-访问">Elastic：为 Elasticsearch 启动 https 访问</h1>
-<br>
-<p><strong>HTTPS</strong> （全称：Hyper Text Transfer Protocol over SecureSocket Layer），是以安全为目标的 HTTP 通道，在HTTP的基础上通过传输加密和身份认证保证了传输过程的安全性。在Elastic SIEM的安全领域，我们需要把 Elasticsearch 的访问变为 https 的访问，这样使得我们的数据更加安全可靠。</p>
-<p><br><br></p>
-<p>在为 Elasticsearch 启动 https 访问之前需要确保 已设置Elastic账户安全密码访问，可参考</p>
-<p><a href="https://blog.csdn.net/Ussim/article/details/108375933">Elasticsearch、Elasticsearch-head、Kibana 安全设置账号密码验证登陆</a></p>
-<br>
-]]></summary>
-        <content type="html"><![CDATA[<h1 id="elastic为-elasticsearch-启动-https-访问">Elastic：为 Elasticsearch 启动 https 访问</h1>
-<br>
-<p><strong>HTTPS</strong> （全称：Hyper Text Transfer Protocol over SecureSocket Layer），是以安全为目标的 HTTP 通道，在HTTP的基础上通过传输加密和身份认证保证了传输过程的安全性。在Elastic SIEM的安全领域，我们需要把 Elasticsearch 的访问变为 https 的访问，这样使得我们的数据更加安全可靠。</p>
-<p><br><br></p>
-<p>在为 Elasticsearch 启动 https 访问之前需要确保 已设置Elastic账户安全密码访问，可参考</p>
-<p><a href="https://blog.csdn.net/Ussim/article/details/108375933">Elasticsearch、Elasticsearch-head、Kibana 安全设置账号密码验证登陆</a></p>
-<br>
-<!-- more -->
-<br>
-<p>我的<a href="https://iseed.ml/">小站</a>、<a href="https://github.com/Ryyyc">Github</a>、<a href="https://blog.csdn.net/Ussim">CSDN</a></p>
-<p><br><br></p>
-<h2 id="elasticsearch">Elasticsearch</h2>
-<p>在 Elasticsearch 安装目录下运行以下命令</p>
-<pre><code class="language-bash"># 生成 p12 证书，生成elastic-stack-ca.p12文件
-./bin/elasticsearch-certutil ca 
-
-# 生成 证书和私钥，生成elastic-certificates.p12文件
-./bin/elasticsearch-certutil cert --ca elastic-stack-ca.p12 
-
-# 生成 newfile.crt.pem 文件
-openssl pkcs12 -in elastic-stack-ca.p12 -out newfile.crt.pem -clcerts -nokeys
-
-# 修改 elastic-certificates.p12 文件的读取权限
-chmod ugo+r elastic-certificates.p12
-
-# 将 elastic-certificates.p12 文件移动到 Elasticsearch 安装目录下的 config 子目录中
-mv elastic-certificates.p12 ./config
-
-
-# 修改 newfile.crt.pem 文件的读取权限
-chmod ugo+r newfile.crt.pem
-
-# 将 newfile.crt.pem 文件移动到 Kibana 安装目录下的 config 子目录中（注意改成自己的 kibana 目录）
-mv newfile.crt.pem /usr/local/environment/elk/kibana/kibana-7.8.0-linux-x86_64/config
-
-</code></pre>
-<p><br><br></p>
-<figure data-type="image" tabindex="1"><img src="https://img-blog.csdnimg.cn/20200905223020708.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1Vzc2lt,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" loading="lazy"></figure>
-<p><br><br></p>
-<p>文件名均使用缺省文件名，密码均为空（即直接按 Enter 键）</p>
-<br>
-<p>修改 Elasticsearch 安装目录下的 config 子目录下的 elasticsearch.yml 文件，添加/修改 以下配置</p>
-<pre><code class="language-yaml">xpack.security.http.ssl.enabled: true
-xpack.security.http.ssl.keystore.path: elastic-certificates.p12
-xpack.security.http.ssl.truststore.path: elastic-certificates.p12
-
-xpack.security.transport.ssl.verification_mode: certificate
-xpack.security.transport.ssl.keystore.path: elastic-certificates.p12
-xpack.security.transport.ssl.truststore.path: elastic-certificates.p12
-</code></pre>
-<br>
-<figure data-type="image" tabindex="2"><img src="https://img-blog.csdnimg.cn/20200905223030175.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1Vzc2lt,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" loading="lazy"></figure>
-<p><br><br></p>
-<h2 id="kibana">Kibana</h2>
-<p>修改 Kibana 安装目录下的 config 子目录下的 kibana.yml 文件，添加/修改 以下配置</p>
-<pre><code class="language-yaml">elasticsearch.hosts: [&quot;https://localhost:9200&quot;]
-elasticsearch.ssl.certificateAuthorities: [&quot;config/newfile.crt.pem&quot;]
-elasticsearch.ssl.verificationMode: none
-</code></pre>
-<br>
-<p>为了我们能够方便地访问，我们针对kibana不启用verificationMode</p>
-<br>
-<p>最后，我们重启 Elasticsearch 和 Kibana</p>
-<p><br><br></p>
-<p>更多详情请参考 <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/configuring-tls.html">官方文档</a></p>
-<p><br><br></p>
 ]]></content>
     </entry>
 </feed>

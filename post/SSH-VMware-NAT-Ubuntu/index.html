@@ -8,7 +8,7 @@
 <meta name="keywords" content="Gridea静态个人博客">
 <meta name="description" content="Root down，grow upward.">
 <meta name="theme-color" content="#000">
-<title>Ubuntu 20.04 搜索引擎环境搭建 | Rme</title>
+<title>通过 SSH 连接到 VMware NAT 模式下的 Ubuntu 虚拟机环境 | Rme</title>
 <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/Ryyyc/Ryyyc.github.io@V0.0.2/favicon.ico?v=1611240105430">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Ryyyc/Ryyyc.github.io@V0.0.2/media/css/gemini.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Ryyyc/Ryyyc.github.io@V0.0.2/media/fonts/font-awesome.css">
@@ -49,8 +49,8 @@
 
 
 
-  <meta name="description" content="Ubuntu 20.04 搜索引擎环境搭建" />
-  <meta name="keywords" content="Ubuntu,ELK" />
+  <meta name="description" content="通过 SSH 连接到 VMware NAT 模式下的 Ubuntu 虚拟机环境" />
+  <meta name="keywords" content="Ubuntu" />
 </head>
 
 <body>
@@ -201,8 +201,7 @@
       <div class="sidebar-body gemini" id="sidebar_body">
         
           
-            <div class="post-side-meta" id="post_side_meta">
-              
+            
 <div class="sidebar-wrapper box-shadow-wrapper bg-color">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="https://cdn.jsdelivr.net/gh/Ryyyc/Ryyyc.github.io@V0.0.2/images/avatar.png"/>
@@ -268,250 +267,6 @@
 
 
 </div>
-            </div>
-            <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
-              <div class="toc-box right-motion">
-  <div class="toc-wrapper auto-number auto"
-    id="toc_wrapper">
-    <ul class="markdownIt-TOC">
-<li>
-<ul>
-<li><a href="#%E5%AE%89%E8%A3%85">安装</a><br>
-*
-<ul>
-<li><a href="#%E5%88%9B%E5%BB%BA%E7%9B%AE%E5%BD%95">创建目录</a></li>
-<li><a href="#%E6%9B%B4%E6%96%B0%E4%B8%80%E6%B3%A2%E8%BD%AF%E4%BB%B6">更新一波软件</a></li>
-<li><a href="#%E5%AE%89%E8%A3%85-apt-fast">安装 Apt-fast</a></li>
-<li><a href="#%E5%AE%89%E8%A3%85-java">安装 Java</a></li>
-<li><a href="#%E5%AE%89%E8%A3%85-axel">安装 Axel</a></li>
-<li><a href="#%E5%AE%89%E8%A3%85-nodejs">安装 NodeJS</a></li>
-<li><a href="#%E5%AE%89%E8%A3%85-postgresql">安装 PostgreSQL</a></li>
-<li><a href="#%E5%AE%89%E8%A3%85-redis">安装 Redis</a></li>
-<li><a href="#%E5%AE%89%E8%A3%85-elk">安装 ELK</a>
-<ul>
-<li><a href="#%E5%87%86%E5%A4%87%E5%AE%89%E8%A3%85%E5%8C%85%E5%8F%82%E8%80%83%E6%96%B9%E5%BC%8F">准备安装包（参考方式）</a></li>
-<li><a href="#%E5%AE%89%E8%A3%85-elasticsearch">安装 Elasticsearch</a></li>
-<li><a href="#%E5%AE%89%E8%A3%85-logstash">安装 Logstash</a></li>
-<li><a href="#%E5%AE%89%E8%A3%85-kibana">安装 Kibana</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#%E9%85%8D%E7%BD%AE">配置</a><br>
-*
-<ul>
-<li><a href="#postgresql">PostgreSQL</a></li>
-<li><a href="#redis">Redis</a></li>
-<li><a href="#elasticsearch">Elasticsearch</a></li>
-<li><a href="#kibana">Kibana</a></li>
-</ul>
-</li>
-<li><a href="#%E5%90%AF%E5%8A%A8">启动</a><br>
-*
-<ul>
-<li><a href="#postgresql-2">PostgreSQL</a></li>
-<li><a href="#redis-2">Redis</a></li>
-<li><a href="#elasticsearch-2">Elasticsearch</a></li>
-<li><a href="#kibana-2">Kibana</a></li>
-</ul>
-</li>
-<li><a href="#%E5%BC%80%E6%9C%BA%E8%87%AA%E5%90%AF">开机自启</a><br>
-*
-<ul>
-<li><a href="#redis-3">Redis</a></li>
-<li><a href="#elasticsearch-3">Elasticsearch</a></li>
-<li><a href="#elasticsearch-head">Elasticsearch-head</a></li>
-<li><a href="#kibana-3">Kibana</a></li>
-</ul>
-</li>
-<li><a href="#%E5%85%B6%E4%BB%96">其他</a><br>
-*
-<ul>
-<li><a href="#ubuntu%E5%A6%82%E4%BD%95%E5%88%A0%E9%99%A4%E6%B7%BB%E5%8A%A0%E7%9A%84%E4%BB%93%E5%BA%93">Ubuntu如何删除添加的仓库</a></li>
-<li><a href="#postgresql%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C">PostgreSQL相关操作</a></li>
-<li><a href="#linux%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C">Linux相关操作</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-  </div>
-</div>
-
-<script>
-
-  let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1;
-  let active = 'active-show', activeClass = 'active-current';
-  let tocWrapper = document.querySelector('#toc_wrapper');
-  let tocContent = tocWrapper.children[0];
-  let autoNumber = tocWrapper && tocWrapper.classList.contains('auto-number');
-
-  function addTocNumber(elem, deep) {
-    if (!elem) {
-      return;
-    }
-    let prop = elem.__proto__;
-
-    if (prop === HTMLUListElement.prototype) {
-      for (let i = 0; i < elem.children.length; i++) {
-        addTocNumber(elem.children[i], deep + (i + 1) + '.');
-      }
-    } else if (prop === HTMLLIElement.prototype) {
-      // 保存li元素
-      if (elem.children[0] && elem.children[0].__proto__ === HTMLAnchorElement.prototype) {
-        lList.push(elem);
-      }
-      for (let i = 0; i < elem.children.length; i++) {
-        let cur = elem.children[i];
-        if (cur.__proto__ === HTMLAnchorElement.prototype) {
-          if (autoNumber) {
-            cur.text = deep + ' ' + cur.text;
-          }
-        } else if (cur.__proto__ === HTMLUListElement.prototype) {
-          addTocNumber(cur, deep);
-        }
-      }
-    }
-  }
-
-  function removeParentActiveClass() {
-    let parents = tocContent.querySelectorAll('.' + active)
-    parents.forEach(function (elem) {
-      elem.classList.remove(active);
-    });
-  }
-
-  function addActiveClass(index) {
-    if (index >= 0 && index < hList.length) {
-      lList[index].classList.add(activeClass);
-    }
-  }
-
-  function removeActiveClass(index) {
-    if (index >= 0 && index < hList.length) {
-      lList[index].classList.remove(activeClass);
-    }
-  }
-
-  function addActiveLiElemment(elem, parent) {
-    if (!elem || elem === parent) {
-      return;
-    } else {
-      if (elem.__proto__ === HTMLLIElement.prototype) {
-        elem.classList.add(active);
-      }
-      addActiveLiElemment(elem.parentElement, parent);
-    }
-  }
-
-  function showToc() {
-    if (tocWrapper) {
-      postBody = document.querySelector('#post_body');
-      for (let i = 0; i < postBody.children.length; i++) {
-        if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
-          hList.push(postBody.children[i]);
-        }
-      }
-      if (tocWrapper.classList.contains('compress')) {
-        tocContent.classList.add('closed');
-      } else if (tocWrapper.classList.contains('no_compress')) {
-        tocContent.classList.add('expanded');
-      } else {
-        if (hList.length > 10) {
-          active = 'active-hidden'
-          tocContent.classList.add('closed');
-        } else {
-          tocContent.classList.add('expanded');
-        }
-      }
-    }
-  }
-
-  (function () {
-    // 处理不是从#一级标题开始目录
-    if (tocContent.children.length === 1 && tocContent.children[0].__proto__ === HTMLLIElement.prototype) {
-      let con = tocContent.children[0].children[0];
-      tocContent.innerHTML = con.innerHTML;
-    }
-    let markdownItTOC = document.querySelector('.markdownIt-TOC');
-    let innerHeight = window.innerHeight;
-    markdownItTOC.style = `max-height: ${innerHeight - 80 > 0 ? innerHeight - 80 : innerHeight}px`
-    addTocNumber(tocContent, '');
-  })();
-
-  document.addEventListener('scroll', function (e) {
-    if (lList.length <= 0) {
-      return;
-    }
-    let scrollTop = document.scrollingElement.scrollTop + 10;
-    let dir;
-
-    if (lastTop - scrollTop > 0) {
-      dir = 'up';
-    } else {
-      dir = 'down';
-    }
-
-    lastTop = scrollTop;
-    if (scrollTop <= 0) {
-      if (lastIndex >= 0 && lastIndex < hList.length) {
-        lList[lastIndex].classList.remove(activeClass);
-      }
-      return;
-    }
-
-    let current = 0, hasFind = false;
-    for (let i = 0; i < hList.length; i++) {
-      if (hList[i].offsetTop > scrollTop) {
-        current = i;
-        hasFind = true;
-        break;
-      }
-    }
-    if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
-      current = hList.length - 1;
-    } else {
-      current--;
-    }
-    if (dir === 'down') {
-      if (current > lastIndex) {
-        addActiveClass(current);
-        removeActiveClass(lastIndex)
-        lastIndex = current;
-        removeParentActiveClass();
-        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
-      }
-    } else {
-      if (current < lastIndex) {
-        addActiveClass(current);
-        removeActiveClass(lastIndex);
-        lastIndex = current;
-        removeParentActiveClass();
-        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
-      }
-    }
-  });
-
-
-  window.addEventListener('load', function () {
-    showToc();
-    document.querySelector('#sidebar').style = 'display: block;';
-    tocWrapper.classList.add('toc-active');
-    setTimeout(function () {
-      if ("createEvent" in document) {
-        let evt = document.createEvent("HTMLEvents");
-        evt.initEvent("scroll", false, true);
-        document.dispatchEvent(evt);
-      }
-      else {
-        document.fireEvent("scroll");
-      }
-    }, 500)
-  })
-
-</script>
-            </div>
           
         
       </div>
@@ -599,8 +354,8 @@
           <div class="section bg-color post post-page">
             <section class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://Ryyyc.github.io/post/Ubuntu20.04-ELK/">
-      Ubuntu 20.04 搜索引擎环境搭建
+    <a class="post-title-link" href="https://Ryyyc.github.io/post/SSH-VMware-NAT-Ubuntu/">
+      通过 SSH 连接到 VMware NAT 模式下的 Ubuntu 虚拟机环境
     </a>
   </h1>
   <div class="post-meta">
@@ -608,7 +363,7 @@
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span class="language" data-lan="publish">发布于</span>
-      <span class="publish-time" data-t="2020-08-07 16:20:57">2020-08-07</span>
+      <span class="publish-time" data-t="2021-01-21 22:40:57">2021-01-21</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
@@ -619,12 +374,6 @@
       
       <a href="https://Ryyyc.github.io/tag/bYsFXBbd3/">
         <span>Ubuntu</span>
-      </a>、
-      
-      
-      
-      <a href="https://Ryyyc.github.io/tag/T5_OZKfBOv/">
-        <span>ELK</span>
       </a>
       
       
@@ -633,17 +382,17 @@
     
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>19<span class="language" data-lan="minute">分钟</span></span>
+      <span>2<span class="language" data-lan="minute">分钟</span></span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>3657<span class="pc-show language" data-lan="words">字数</span></span>
+      <span>259<span class="pc-show language" data-lan="words">字数</span></span>
     </span>
     
     
     
-    <span id="/post/Ubuntu20.04-ELK/" data-flag-title="Ubuntu 20.04 搜索引擎环境搭建" class="meta-item pc-show leancloud_visitors">
+    <span id="/post/SSH-VMware-NAT-Ubuntu/" data-flag-title="通过 SSH 连接到 VMware NAT 模式下的 Ubuntu 虚拟机环境" class="meta-item pc-show leancloud_visitors">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-eye"></i>
       <span><span class="language" data-lan="view">浏览量</span>：<span class="leancloud-visitors-count"></span></span>
@@ -653,758 +402,38 @@
 </section>
             <div class="post-body next-md-body" id="post_body">
               <br>
-<p>在软件开发项目中，会遇到搜索引擎、日志收集等需求，本教程在阿里云选择公共镜像 <strong>Ubuntu 20.04</strong> 后，部署 apt-fast, java, axel, NodeJS, postgres, Redis, ELK(Elasticsearch, Logstash, Kibana, 均为开箱即用) 服务并设置开机自启。阿里云 Ubuntu 20.04 系统镜像下自带Python3。</p>
+<p>VMware <code>NAT 模式</code> 可以设置主机与虚拟机环境IP、端口的映射，虚拟环境中 SSH 使用 22 端口，只需要将宿主机设置成转发到虚拟机环境的 22 端口。</p>
+<!-- more -->
 <br>
-<!--more-->
+<p>具体步骤：</p>
 <br>
-<p><strong>提醒：文件修改前请自己做好备份</strong></p>
+<p>打开 <code>VMware 菜单-&gt;编辑-&gt;虚拟网络编辑器</code> ，选中 <code>VMnet8</code> ，点击下面的 <code>更改设置</code>，<code>NAT 设置</code></p>
+<figure data-type="image" tabindex="1"><img src="https://img-blog.csdnimg.cn/20210121222938298.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1Vzc2lt,size_16,color_FFFFFF,t_70#pic_center" alt="虚拟网络编辑器" loading="lazy"></figure>
+<p><br><br></p>
+<p>在 <code>NAT设置</code> 中添加 <code>端口转发</code>，主机端口 即宿主机用来连接虚拟环境的端口，虚拟机环境的 IP 地址 则是想要连接的 虚拟机环境的 IP 地址（Linux 可以通过 ifconfig 查看，Windows 可以通过 ipconfig 查看），此虚拟机环境需要开启 SSH 服务</p>
 <br>
-软件安装在 **/usr/local**目录下，日志文件放在**/var**目录下
+<figure data-type="image" tabindex="2"><img src="https://img-blog.csdnimg.cn/20210121223430867.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1Vzc2lt,size_16,color_FFFFFF,t_70#pic_center" alt="ifconfig" loading="lazy"></figure>
 <br>
-相关服务版本信息
-<table>
-<thead>
-<tr>
-<th>软件</th>
-<th>版本</th>
-<th>查询命令</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>apt-fast</td>
-<td>2.0.3 (amd64)</td>
-<td>apt-fast -v</td>
-</tr>
-<tr>
-<td>Java</td>
-<td>openjdk 14.0.1</td>
-<td>java --version</td>
-</tr>
-<tr>
-<td>Axel</td>
-<td>2.17.5 (linux-gnu)</td>
-<td>axel -V</td>
-</tr>
-<tr>
-<td>Node.js</td>
-<td>14.7.0</td>
-<td>node -v</td>
-</tr>
-<tr>
-<td>PostgreSQL</td>
-<td>12.3</td>
-<td>psql -V</td>
-</tr>
-<tr>
-<td>Redis</td>
-<td>6.0.6</td>
-<td>redis-server -v</td>
-</tr>
-<tr>
-<td>Elasticsearch</td>
-<td>7.8.0</td>
-<td></td>
-</tr>
-<tr>
-<td>Elasticsearch-head</td>
-<td>5.0.0</td>
-<td></td>
-</tr>
-<tr>
-<td>Elasticsearch-analysis-ik</td>
-<td>7.8.0</td>
-<td></td>
-</tr>
-<tr>
-<td>Logstash</td>
-<td>7.8.0</td>
-<td></td>
-</tr>
-<tr>
-<td>Kibana</td>
-<td>7.8.0</td>
-<td></td>
-</tr>
-</tbody>
-</table>
+<figure data-type="image" tabindex="3"><img src="https://img-blog.csdnimg.cn/20210121222956561.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1Vzc2lt,size_16,color_FFFFFF,t_70#pic_center" alt="NAT 设置" loading="lazy"></figure>
+<p><br><br></p>
+<p>上面的设置可用通过 SSH 工具连接虚拟环境，比如 Windows 宿主机的 cmd</p>
+<pre><code class="language-bash">ssh ruan@127.0.0.1 -p 2222
+</code></pre>
+<p><br><br></p>
+<p>PS:</p>
 <br>
+<p>检查 SSH 服务是否安装且开启</p>
+<pre><code class="language-bash">ps -e | grep ssh
+</code></pre>
+<p>如果有输出 sshd 证明已经开启ssh服务</p>
 <br>
-<h2 id="安装">安装</h2>
-<br>
-<h4 id="创建目录">创建目录</h4>
-<pre><code class="language-bash"># 创建environment目录
-mkdir /usr/local/environment
-# 移动到environment目录
-cd /usr/local/environment
-# 创建软件目录
-mkdir redis elk elk/elasticsearch elk/logstash elk/kibana
+<p>Linux 系统安装 openssh-server</p>
+<pre><code class="language-bash">sudo apt-get install openssh-server
+</code></pre>
+<p><br><br></p>
+<p>我的<a href="https://ryyyc.github.io/">小站</a>、<a href="https://github.com/Ryyyc">Github</a>、<a href="https://blog.csdn.net/Ussim">CSDN</a></p>
+<p><br><br></p>
 
-# 赋予读写权限
-chmod 777 /usr/local/environment
-</code></pre>
-<br>
-<h4 id="更新一波软件">更新一波软件</h4>
-<pre><code class="language-bash">sudo apt-get upgrade
-</code></pre>
-<br>
-<h4 id="安装-apt-fast">安装 Apt-fast</h4>
-<pre><code class="language-bash">sudo apt install software-properties-common
-sudo add-apt-repository ppa:apt-fast/stable
-sudo apt-get -y install apt-fast
-# 安装过程的配置，选择apt-get, 最大线程数换成16，选择no
-</code></pre>
-<br>
-<h4 id="安装-java">安装 Java</h4>
-<pre><code class="language-bash">sudo apt install openjdk-14-jdk-headless 
-</code></pre>
-<br>
-<h4 id="安装-axel">安装 Axel</h4>
-<pre><code class="language-bash">sudo apt-get install axel
-</code></pre>
-<br>
-<h4 id="安装-nodejs">安装 NodeJS</h4>
-<pre><code class="language-bash">sudo apt install npm
-</code></pre>
-<br>
-<h4 id="安装-postgresql">安装 PostgreSQL</h4>
-<pre><code class="language-bash"># Create the file repository configuration:
-sudo sh -c 'echo &quot;deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main&quot; &gt; /etc/apt/sources.list.d/pgdg.list'
-
-# Import the repository signing key:
-wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
-
-# Update the package lists
-# Install the latest version of PostgreSQL.
-# If you want a specific version, use 'postgresql-12' or similar instead of 'postgresql':
-sudo apt-get update &amp;&amp; sudo apt-get install postgresql
-</code></pre>
-<pre><code class="language-bash">#如果上面安装速度太慢，使用apt-fast安装
-sudo apt-fast update
-sudo apt-fast install postgresql
-</code></pre>
-<pre><code class="language-bash"># 执行npm install速度慢，更换淘宝镜像
-npm config set registry http://registry.npm.taobao.org
-</code></pre>
-<br>
-<h4 id="安装-redis">安装 Redis</h4>
-<pre><code class="language-bash"># 进入redis安装目录
-cd /usr/local/environment/redis
-# 获取redis安装包
-wget http://download.redis.io/releases/redis-6.0.6.tar.gz
-# 解压（请使用对应的文件名）
-tar -xvf redis-6.0.6.tar.gz 
-# 创建软链接（为了方便，非必须，如果没有创建，接下来的涉及到redis路径请用redis-6.0.5）
-# ln -s 原始目录名 快速访问目录名
-ln -s redis-6.0.6 redis
-# 进入redis目录，对解压的Redis文件进行编译
-cd redis
-make
-# 进入src文件夹进行Redis安装
-cd src
-make install
-</code></pre>
-<p>redis安装包下载链接从 <a href="https://redis.io/">redis</a> 官网获取。</p>
-<figure data-type="image" tabindex="1"><img src="https://img-blog.csdnimg.cn/20200807161728659.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1Vzc2lt,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" loading="lazy"></figure>
-<br>
-<br>
-<h4 id="安装-elk">安装 ELK</h4>
-<br>
-<h5 id="准备安装包参考方式">准备安装包（参考方式）</h5>
-<pre><code class="language-bash"># 进入 ELK 目录
-cd /usr/local/environment/elk
-# 通过filezilla、FinalShell等工具将下载好的安装包传输到服务器
-</code></pre>
-<p>官网/下载源:</p>
-<p><a href="https://www.elastic.co/cn/downloads/elasticsearch">Elasticsearch</a>, <a href="https://github.com/mobz/elasticsearch-head">elasticsearch-analysis-ik</a>, <a href="https://github.com/mobz/elasticsearch-head">elasticsearch-head</a>, <a href="https://www.elastic.co/cn/downloads/logstash">Logstash</a>, <a href="https://www.elastic.co/cn/downloads/kibana">Kibana</a></p>
-<p>百度网盘:</p>
-<p>链接: <a href="https://pan.baidu.com/s/1M7gV2xjLr2cJTLUt0VCA3g">百度网盘</a>  提取码: kdi9</p>
-<p>PS: 7-zip可以（解压ZIP文件然后）压缩文件得到.tar.gz压缩包</p>
-<p>分别将[elasticsearch, elasticsearch-analysis, elasticsearch-head], [logstash], [kibana] 的压缩包放在 elasticsearch, logstash, kibana 目录下</p>
-<br>
-<h5 id="安装-elasticsearch">安装 Elasticsearch</h5>
-<pre><code class="language-bash"># 进入 elasticsearch 目录
-cd /usr/local/environment/elk/elasticsearch
-# 解压安装包
-tar -zxvf elasticsearch-7.8.0-linux-x86_64.tar.gz
-tar -zxvf elasticsearch-head-5.0.0.tar.gz
-tar -zxvf elasticsearch-analysis-ik-7.8.0.tar.gz
-# 将 IK分词器 文件移动到elasticsearch的plugins目录下
-mv elasticsearch-analysis-ik-7.8.0 ./elasticsearch-7.8.0/plugins
-# 进入 elasticsearch-head 目录，安装 elasticsearch-head 依赖包
-cd elasticsearch-head-5.0.0
-npm install
-</code></pre>
-<br>
-<h5 id="安装-logstash">安装 Logstash</h5>
-<pre><code class="language-bash"># 进入 logstash 目录
-cd /usr/local/environment/elk/logstash
-# 解压安装包
-tar -zxvf logstash-7.8.0.tar.gz
-</code></pre>
-<h5 id="安装-kibana">安装 Kibana</h5>
-<pre><code class="language-bash"># 进入 Kibana 目录
-cd /usr/local/environment/elk/kibana
-# 解压安装包
-tar -zxvf kibana-7.8.0-linux-x86_64.tar.gz
-</code></pre>
-<br>
-<br>
-<br>
-<h2 id="配置">配置</h2>
-<br>
-<h4 id="postgresql">PostgreSQL</h4>
-<p>创建用户</p>
-<pre><code class="language-bash"># 修改数据库用户
-sudo su - postgres
-# 连接数据库(连接后命令输入头变成 postgres=# )
-psql
-# 修改密码
-\password
-</code></pre>
-<br>
-<p>修改配置文件 <em><strong>postgresql.conf</strong></em>   允许所有ip访问</p>
-<pre><code class="language-bash">listen_addresses = '*'
-</code></pre>
-<br>
-<p>修改认证权限配置文件 <em><strong>pg_hba.conf</strong></em>  ，添加一下配置，并将所有的&quot;peer&quot;改为&quot;md5&quot;（密码认证）</p>
-<pre><code class="language-bash"># IPv4 local connections:
-host    all             all             0.0.0.0/0               md5
-</code></pre>
-<p>(我的配置文件在/etc/postgresql/12/main目录下)</p>
-<br>
-<h4 id="redis">Redis</h4>
-<pre><code class="language-bash"># 在/var/log目录下创建redis文件夹，存放redis日志文件
-mkdir /var/log/redis
-# 进入redis安装目录，创建conf、data文件夹
-cd /usr/local/environment/redis/redis
-mkdir data conf
-# 进入conf目录，编写配置文件 redis-端口号.conf
-# 例：redis-6379.conf 
-cd conf
-touch redis-6379.conf
-</code></pre>
-<p>（除了带注释的行，其他均为默认设置，见redis目录下的redis.conf文件）</p>
-<pre><code class="language-basic">#  绑定的ip，请根据需求自行更换
-# bind 127.0.0.1
-#  远程访问 protected-mode no
-protected-mode no
-#  端口设置
-port 6379
-tcp-backlog 511
-timeout 0
-tcp-keepalive 300
-#  以守护进程的方式启动，redis以服务的形式存在，日志不再打印到命令窗口中
-daemonize yes
-supervised no
-pidfile /var/run/redis-6379.pid
-loglevel notice
-#  日志文件，使用绝对路径，防止出问题
-logfile &quot;/var/log/redis/6379.log&quot; 
-databases 16
-always-show-logo yes
-save 900 1
-save 300 10
-save 60 10000
-stop-writes-on-bgsave-error yes
-rdbcompression yes
-rdbchecksum yes
-dbfilename dump.rdb
-rdb-del-sync-files no 
-#  当前服务文件保存位置，包含日志文件、持久化文件等，使用绝对路径，防止出问题
-dir /var/log/redis
-replica-serve-stale-data yes
-replica-read-only yes
-repl-diskless-sync no
-repl-diskless-sync-delay 5
-repl-diskless-load disabled
-repl-disable-tcp-nodelay no
-replica-priority 100
-acllog-max-len 128
-lazyfree-lazy-eviction no
-lazyfree-lazy-expire no
-lazyfree-lazy-server-del no
-replica-lazy-flush no
-lazyfree-lazy-user-del no
-appendonly no
-appendfilename &quot;appendonly.aof&quot;
-appendfsync everysec
-no-appendfsync-on-rewrite no
-auto-aof-rewrite-percentage 100
-auto-aof-rewrite-min-size 64mb
-aof-load-truncated yes
-aof-use-rdb-preamble yes
-lua-time-limit 5000
-slowlog-log-slower-than 10000
-slowlog-max-len 128
-latency-monitor-threshold 0
-notify-keyspace-events &quot;&quot;
-hash-max-ziplist-entries 512
-hash-max-ziplist-value 64
-list-max-ziplist-size -2
-list-compress-depth 0
-set-max-intset-entries 512
-zset-max-ziplist-entries 128
-zset-max-ziplist-value 64
-hll-sparse-max-bytes 3000
-stream-node-max-bytes 4096
-stream-node-max-entries 100
-activerehashing yes
-client-output-buffer-limit normal 0 0 0
-client-output-buffer-limit replica 256mb 64mb 60
-client-output-buffer-limit pubsub 32mb 8mb 60
-hz 10
-dynamic-hz yes
-aof-rewrite-incremental-fsync yes
-rdb-save-incremental-fsync yes
-jemalloc-bg-thread yes
-# 内存到达上限之后的处理策略
-maxmemory-policy noeviction 
-# 1. volatile-lru：对设置了过期时间的key执行LRU逐出策略（默认值）
-# 2. allkeys-lru ： 对所有key使用LRU逐出策略
-# 3. volatile-random：随机删除即将过期key（LFU）
-# 4. allkeys-random：随机删除
-# 5. volatile-ttl ： 删除即将过期的
-# 6. noeviction ： 永不过期，返回错误
-</code></pre>
-<br>
-<h4 id="elasticsearch">Elasticsearch</h4>
-<pre><code class="language-bash"># 进入Elasticsearch安装目录
-cd /usr/local/environment/elk/elasticsearch/elasticsearch-7.8.0
-# 创建文件夹data、logs，存放elasticsearch数据，日志
-mkdir data logs
-</code></pre>
-<pre><code class="language-bash"># 进入Elasticsearch配置文件目录
-cd /usr/local/environment/elk/elasticsearch/elasticsearch-7.8.0/config
-# 编辑该目录下的elasticsearch.yml文件，在文件末尾加上下面配置(或者取消注释后修改)
-</code></pre>
-<pre><code class="language-yaml"> #集群名称
-cluster.name: SUSTech-Town-ES
-
-#节点名称
-node.name: node-st
-
-#数据和日志的存储目录(若安装路径不同, 请注意更改)
-path.data: /usr/local/environment/elk/elasticsearch/elasticsearch-7.8.0/data
-path.logs: /usr/local/environment/elk/elasticsearch/elasticsearch-7.8.0/logs
-
-#设置绑定的ip，0.0.0.0代表任意ip访问
-network.host: 0.0.0.0
-
- #端口
-http.port: 9200
-
-#设置在集群中的所有节点名称
-cluster.initial_master_nodes: [&quot;node-st&quot;]
-
-# 配置elasticsearch允许跨域访问
-http.cors.enabled: true
-http.cors.allow-origin: &quot;*&quot;
-</code></pre>
-<br>
-<p>修改系统的进程内存限制，否则启动es会报错</p>
-<p>/etc/security目录下的***limits.conf***文件，更新/添加以下数据</p>
-<pre><code class="language-bash">* soft nofile 65536
-* hard nofile 131072
-* soft nproc 4096
-* hard nproc 4096
-</code></pre>
-<p>/etc目录下的***sysctl.conf***文件，添加以下配置</p>
-<pre><code class="language-bash"># elasticsearch
-vm.max_map_count=262145
-</code></pre>
-<p>添加完成并保存后执行</p>
-<pre><code class="language-bash">sysctl -p
-</code></pre>
-<p>elasticsearch不允许以root用户启动，故新建其他用户来启动</p>
-<pre><code class="language-bash"># 创建用户组es
-groupadd elk
-# 创建新用户elk, -g elk 设置其用户组为elk, -p 123456 设置其密码123456
-useradd elk -g elk -p 123456
-# 更改 elk 文件夹及内部文件的所属用户及组为 elk:elk
-chown -R elk:elk /usr/local/environment/elk
-</code></pre>
-<br>
-<h4 id="kibana">Kibana</h4>
-<p>修改/usr/local/environment/elk/kibana/kibana-7.8.0-linux-x86_64/config目录下的***kibana.yml***文件</p>
-<pre><code class="language-bash">server.port: 5601
-# 允许所有ip访问
-server.host: &quot;0.0.0.0&quot;
-server.name: &quot;SUSTechTown&quot;
-elasticsearch.hosts: [&quot;http://localhost:9200&quot;]
-
-# 按需开启
-#elasticsearch.username: &quot;kibana_system&quot;
-#elasticsearch.password: &quot;pass&quot;
-
-pid.file: /var/run/kibana.pid
-
-# 语言中文
-i18n.locale: &quot;zh-CN&quot;
-
-# 加密，注意：参数值至少32位，否则启动会报错提示
-xpack.encryptedSavedObjects.encryptionKey: SUSTechTownencryptedSavedObjects0123456789
-xpack.security.encryptionKey: SUSTechTownencryptionKeysecurity01234567890
-xpack.reporting.encryptionKey: SUSTechTownencryptionKeyreporting0123456789
-</code></pre>
-<pre><code class="language-bash"># 给elasticsearch及其以下子目录赋予读写权限
-chmod -R 777 /usr/local/environment
-</code></pre>
-<br>
-<br>
-<br>
-<h2 id="启动">启动</h2>
-<br>
-<h4 id="postgresql-2">PostgreSQL</h4>
-<br>
-<p><strong>命令行的各个参数解释说明</strong>：</p>
-<ul>
-<li>-U username 用户名，默认值postgres</li>
-<li>-d dbname 要连接的数据库名，默认值postgres。如果单指定-U，没指定-d参数，则默认访问与用户名名称相同的数据库。</li>
-<li>-h hostname 主机名，默认值localhost</li>
-<li>-p port 端口号，默认值5432</li>
-</ul>
-<br>
-<h4 id="redis-2">Redis</h4>
-<pre><code class="language-bash"># 进入redis配置文件目录
-cd /usr/local/environment/redis/redis/conf
-# 指定配置文件开启redis服务
-redis-server redis-6379.conf
-</code></pre>
-<br>
-<p>PS: /usr/local/environment/redis/redis/data 目录下的日志 6379.log 如有 WARING 则按照其提示操作</p>
-<p>（最初安装没有配置是有WARING的，操作提示很明了）</p>
-<br>
-<br>
-<h4 id="elasticsearch-2">Elasticsearch</h4>
-<pre><code class="language-bash"># 进入elasticsearch安装目录
-cd /usr/local/environment/elk/elasticsearch/elasticsearch-7.8.0
-# 切换用户
-su elk
-# 启动elasticsearch
-./bin/elasticsearch
-# 或者 后台启动
-./bin/elasticsearch -d
-</code></pre>
-<pre><code class="language-bash"># 启动elasticsearch-head(必须先启动elasticsearch)
-cd /usr/local/environment/elk/elasticsearch/elasticsearch-head-5.0.0
-npm run start
-# 或者 后台启动
-nohup npm run start &amp;
-</code></pre>
-<br>
-<p>如果出现一下报错，说明IK分词器插件安装不正确</p>
-<pre><code class="language-java">java.lang.IllegalStateException: Could not load plugin descriptor for plugin directory [elasticsearch-analysis-ik-7.8.0]
-Likely root cause: java.nio.file.NoSuchFileException: /usr/local/environment/elk/elasticsearch/elasticsearch-7.8.0/plugins/elasticsearch-analysis-ik-7.8.0/plugin-descriptor.properties
-</code></pre>
-<br>
-检查elasticsearch-analysis-ik-7.8.0文件夹(或者ik分词器压缩包)下是否存在plugin-descriptor.properties文件
-<br>
-<br>
-<h4 id="kibana-2">Kibana</h4>
-<pre><code class="language-bash"># 进入kibana安装目录
-cd /usr/local/environment/elk/kibana/kibana-7.8.0-linux-x86_64
-# 切换用户
-su elk
-# 启动kibana
-./bin/kibana
-# 或者 后台启动 
-nohup ./bin/kibana &amp;
-</code></pre>
-<br>
-<p>若出现一下报错无法启动</p>
-<pre><code class="language-bash"> FATAL  Error: EACCES: permission denied, open '/var/run/kibana.pid'
-</code></pre>
-<br>
-则到/var/run目录下新建文件kibana.pid或执行一下命令
-<pre><code class="language-bash">touch /var/run/kibana.pid
-</code></pre>
-<br>
-<br>
-<br>
-<h2 id="开机自启">开机自启</h2>
-<br>
-<p><strong>配置使用 systemctl 管理 redis, elasticsearch, elasticsearch-head, kibana</strong></p>
-<pre><code class="language-bash"># 进入脚本文件目录
-cd /etc/init.d
-# 创建脚本文件
-touch redis elasticsearch elasticsearch-head kibana
-</code></pre>
-<br>
-<h4 id="redis-3">Redis</h4>
-<pre><code class="language-bash">#!/bin/bash
-#chkconfig: 22345 10 90
-#description: Start and Stop redis
-
-# redis安装目录
-REDIS_PATH=/usr/local/environment/redis/redis-6.0.6
-# 启动端口号
-REDIS_PORT=6379
-EXEC=$REDIS_PATH/src/redis-server
-CLIEXEC=$REDIS_PATH/src/redis-cli
-
-PIDFILE=/var/run/redis-6379.pid
-# redis配置文件路径
-CONF=&quot;$REDIS_PATH/conf/redis-6379.conf&quot;
-
-case &quot;$1&quot; in
-    start)
-        if [ -f $PIDFILE ];then
-            echo &quot;$PIDFILE exists,process is already running or crashed&quot;
-        else
-            echo &quot;Starting Redis server...&quot;
-            $EXEC $CONF
-        fi
-        ;;
-    stop)
-        if [ ! -f $PIDFILE ];then
-            echo &quot;$PIDFILE does not exist,process is not running&quot;
-        else
-            PID=$(cat $PIDFILE)
-            echo &quot;Stopping...&quot;
-            $CLIEXEC -p $REDIS_PORT shutdown
-            while [ -x /proc/${PID} ]
-                do
-                    echo &quot;Waiting for Redis to shutdown...&quot;
-                    sleep 1
-                done
-                echo &quot;Redis stopped&quot;
-        fi
-        ;;
-    restart)
-        &quot;$0&quot; stop
-        sleep 3
-        &quot;$0&quot; start
-        ;;
-    *)
-        echo &quot;Please use start or stop or restart as first argument&quot;
-        ;;
-esac
-</code></pre>
-<pre><code class="language-bash"># 修改文件权限
-chmod +x /etc/init.d/redis
-</code></pre>
-<br>
-<h4 id="elasticsearch-3">Elasticsearch</h4>
-<pre><code class="language-bash">#!/bin/sh
-#chkconfig: 2345 80 05
-
-#description: elasticsearch
-
-# 用于启动elasticsearch的用户
-ES_USER=elk
-# elasticsearch安装目录
-ES_PATH=/usr/local/environment/elk/elasticsearch/elasticsearch-7.8.0
-
-case &quot;$1&quot; in
-    start)
-        su $ES_USER &lt;&lt; !
-        $ES_PATH/bin/elasticsearch -d;
-!
-        echo &quot;elasticsearch startup&quot;
-        ;;
-    stop)
-        es_pid=`ps aux|grep elasticsearch | grep -v 'grep elasticsearch' | awk '{print $2}'`
-        kill -9 $es_pid
-        echo &quot;elasticsearch stopped&quot;
-        ;;
-    restart)
-        es_pid=`ps aux|grep elasticsearch | grep -v 'grep elasticsearch' | awk '{print $2}'`
-        kill -9 $es_pid
-        echo &quot;elasticsearch stopped&quot;
-        sleep 3
-        su $ES_USER &lt;&lt; !
-        $ES_PATH/bin/elasticsearch -d;
-!
-        echo &quot;elasticsearch restarted&quot;
-        ;;
-    *)
-        echo &quot;Usage: $0 {start|stop|restart|force-reload|status}&quot;
-        ;;
-esac
-</code></pre>
-<pre><code class="language-bash"># 修改文件权限
-chmod +x /etc/init.d/elasticsearch
-</code></pre>
-<br>
-<h4 id="elasticsearch-head">Elasticsearch-head</h4>
-<pre><code class="language-bash">#!/bin/sh
-
-#chkconfig: 2345 80 05
-#description elasticsearch-head
-
-# elasticsearch-head 启动端口
-ES_HEAD_HOST=9100
-# elasticsearch-head 安装路径
-ES_HEAD_PATH=/usr/local/environment/elk/elasticsearch/elasticsearch-head-5.0.0
-# 用于启动elasticsearch-head的用户
-ES_HEAD_USER=elk
-# nodejs 安装路径(可以通过此命令获得: which node)
-export NODE_PATH=/usr/bin/node
-export PATH=$PATH:$NODE_PATH/bin
-
-
-case &quot;$1&quot; in
-    start)
-        su $ES_HEAD_USER&lt;&lt;!
-        cd $ES_HEAD_PATH;
-        nohup npm run start &gt;$ES_HEAD_PATH/nohup.out 2&gt;&amp;1 &amp; 
-!
-        echo &quot;elasticsearch-head startup&quot;
-        ;;
-    stop)
-        es_head_pid=`lsof -i :9100 | awk '{print $2}' | sed -n '2p'`
-        kill -9 $es_head_pid
-        echo &quot;elasticsearch-head stopped&quot;
-        ;;
-    restart)
-        es_head_pid=`lsof -i :9100 | awk '{print $2}' | sed -n '2p'`
-        kill -9 $es_head_pid
-        echo &quot;elasticsearch-head stopped&quot;
-        sleep 3
-        su $ES_HEAD_USER&lt;&lt;!
-        cd $ES_HEAD_PATH;
-        nohup npm run start &gt;$ES_HEAD_PATH/nohup.out 2&gt;&amp;1 &amp;
-!
-        echo &quot;elasticsearch-head restarted&quot;
-        ;;
-    *)
-        echo &quot;Usage: $0 {start|stop|restart|force-reload|status}&quot;
-
-esac
-</code></pre>
-<pre><code class="language-bash"># 修改文件权限
-chmod +x /etc/init.d/elasticsearch-head
-</code></pre>
-<br>
-<h4 id="kibana-3">Kibana</h4>
-<pre><code class="language-bash">#!/bin/sh
-#
-# /etc/init.d/kibana4_init -- startup script for kibana4
-### BEGIN INIT INFO
-# Provides:          kibana4_init
-# Required-Start:    $network $remote_fs $named
-# Required-Stop:     $network $remote_fs $named
-# Default-Start:     2 3 4 5
-# Default-Stop:      0 1 6
-# Short-Description: Starts kibana4_init
-# Description:       Starts kibana4_init using start-stop-daemon
-### END INIT INFO
-
-#!/bin/sh
-#chkconfig: 2345 80 05
-
-#description: kibana
-
-# 用于启动 kibana 的用户
-KIBANA_USER=elk
-# kibana安装目录
-KIBANA_PATH=/usr/local/environment/elk/kibana/kibana-7.8.0-linux-x86_64
-
-case &quot;$1&quot; in
-    start)
-        su $KIBANA_USER &lt;&lt; !
-        nohup $KIBANA_PATH/bin/kibana &amp;
-!
-        echo &quot;kibana startup&quot;
-        ;;
-    stop)
-        kibana_pid=`ps aux|grep kibana | grep -v 'grep kibana' | awk '{print $2}'`
-        kill -9 $kibana_pid
-        echo &quot;kibana stopped&quot;
-        ;;
-    restart)
-        kibana_pid=`ps aux|grep kibana | grep -v 'grep kibana' | awk '{print $2}'`
-        kill -9 $kibana_pid
-        echo &quot;kibana stopped&quot;
-        su $KIBANA_USER &lt;&lt; !
-        nohup $KIBANA_PATH/bin/kibana &amp;
-!
-        echo &quot;kibana restarted&quot;
-        ;;
-    *)
-        echo &quot;Usage: $0 {start|stop|restart|force-reload|status}&quot;
-        ;;
-esac
-</code></pre>
-<pre><code class="language-bash"># 修改文件权限
-chmod +x /etc/init.d/kibana
-</code></pre>
-<br>
-<p>此时可以通过以下命令启动、停止redis服务，查看服务状态</p>
-<pre><code class="language-bash">systemctl start redis
-systemctl stop redis
-systemctl status redis
-</code></pre>
-<br>
-<p><strong>设置开机启动</strong></p>
-<p>打开 /lib/systemd/system 目录下的 <em><strong>rc.local.service</strong></em> 文件，末尾加入以下内容</p>
-<pre><code class="language-bash">[Install]  
-WantedBy=multi-user.target  
-Alias=rc-local.service
-</code></pre>
-<p>在 /etc 目录下新建 <em><strong>rc.loacl</strong></em> 文件并加上权限</p>
-<pre><code class="language-bash">sudo touch /etc/rc.local
-sudo chmod +x /etc/rc.local
-</code></pre>
-<p>编写 <em><strong>rc.loacl</strong></em>  文件内容</p>
-<pre><code class="language-bash">#!/bin/sh
-echo never &gt; /sys/kernel/mm/transparent_hugepage/enabled
-
-# 服务自启
-systemctl start redis
-systemctl start elasticsearch
-systemctl start elasticsearch-head
-systemctl start kibana
-exit 0
-</code></pre>
-<br>
-<p>重启命令测试</p>
-<pre><code class="language-bash">reboot
-</code></pre>
-<br>
-<br>
-<br>
-<h2 id="其他">其他</h2>
-<br>
-<h4 id="ubuntu如何删除添加的仓库">Ubuntu如何删除添加的仓库</h4>
-<p>我们在安装某些软件的时候需要提前设置他的仓库，但是装好后每次运行apt-get update 都会从重新去扫描这个仓库，没报错还好，但有些仓库会报错。因此我们需要删除没用的仓库。</p>
-<p>方法：<br>
-1.用代码，这里不写了。<br>
-2.不用代码，直接在/etc/apt/sources.list.d/文件夹里面找到需要删除的仓库</p>
-<br>
-<h4 id="postgresql相关操作">PostgreSQL相关操作</h4>
-<pre><code class="language-bash"># 查看PostgreSQL状态
-service postgresql status
-# 重启PostgreSQL
-service postgresql restart
-
-# client命令行登录(下列参数自己替换)
-psql -U {USERNAME} -d {DATABASE} -h {HOST} -p {PORT}
-
-# 登录数据库之后的操作
-# 建立新的数据库用户
-create user zhangsan with password '123456';
-# 为新用户建立数据库
-create database testdb owner zhangsan;
-# 把新建的数据库权限赋予新用户
-grant all privileges on database testdb to zhangsan;
-
-#创建超级用户
-create user checker with superuser;
-\password checker;
-</code></pre>
-<br>
-<h4 id="linux相关操作">Linux相关操作</h4>
-<pre><code class="language-bash"># 查看后台 redis 进程
-ps -ef | grep redis
-# 查看后台 elasticsearch 进程
-ps -ef | grep elasticsearch
-# 查看 nginx 安装目录
-nginx -t
-</code></pre>
-<br>
-<br>
             </div>
             
             
@@ -1416,7 +445,7 @@ nginx -t
     </li>
     <li class="post-copyright-link">
       <strong class="language" data-lan="link">本文链接：</strong>
-      <a href="https://Ryyyc.github.io/post/Ubuntu20.04-ELK/" title="Ubuntu 20.04 搜索引擎环境搭建">https://Ryyyc.github.io/post/Ubuntu20.04-ELK/</a>
+      <a href="https://Ryyyc.github.io/post/SSH-VMware-NAT-Ubuntu/" title="通过 SSH 连接到 VMware NAT 模式下的 Ubuntu 虚拟机环境">https://Ryyyc.github.io/post/SSH-VMware-NAT-Ubuntu/</a>
     </li>
     <li class="post-copyright-license">
       <strong class="language" data-lan="copyright">版权声明： </strong>
@@ -1427,21 +456,15 @@ nginx -t
     
       <a href="https://Ryyyc.github.io/tag/bYsFXBbd3/"># Ubuntu</a>
     
-      <a href="https://Ryyyc.github.io/tag/T5_OZKfBOv/"># ELK</a>
-    
   </div>
   <div class="nav">
     <div class="nav-prev">
       
-        <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" title="CSDN添加文章目录" href="https://Ryyyc.github.io/post/CSDN-add-contents/">CSDN添加文章目录</a class="nav-pc-next">
-        <a class="nav-mobile-prev" title="CSDN添加文章目录" href="https://Ryyyc.github.io/post/CSDN-add-contents/">上一篇</a>
-      
     </div>
     <div class="nav-next">
       
-        <a class="nav-pc-next" title="Windows 下 VS2017(+Clion) 配置 OpenCV-4.4.0" href="https://Ryyyc.github.io/post/Windows-with-OpenCV4.4.0/">Windows 下 VS2017(+Clion) 配置 OpenCV-4.4.0</a>
-        <a class="nav-mobile-next" title="Windows 下 VS2017(+Clion) 配置 OpenCV-4.4.0" href="https://Ryyyc.github.io/post/Windows-with-OpenCV4.4.0/">下一篇</a>
+        <a class="nav-pc-next" title="GitHub + jsDelivr + PicGo 搭建个人图床" href="https://Ryyyc.github.io/post/github-jsdelivr-picgo-image-hosting/">GitHub + jsDelivr + PicGo 搭建个人图床</a>
+        <a class="nav-mobile-next" title="GitHub + jsDelivr + PicGo 搭建个人图床" href="https://Ryyyc.github.io/post/github-jsdelivr-picgo-image-hosting/">下一篇</a>
         <i class="fa fa-chevron-right"></i>
       
     </div>
